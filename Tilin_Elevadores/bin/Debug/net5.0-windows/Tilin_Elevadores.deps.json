@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Tilin_Elevadores/1.0.0": {
+        "runtime": {
+          "Tilin_Elevadores.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tilin_Elevadores/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
