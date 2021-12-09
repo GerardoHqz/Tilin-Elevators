@@ -1,0 +1,23 @@
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.csprojAssemblyReference.cache
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmHome.resources
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.csproj.GenerateResource.cache
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.AssemblyInfoInputs.cache
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.AssemblyInfo.cs
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.csproj.CoreCompileInputs.cache
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\bin\Debug\net5.0-windows\Elevators Tilin.exe
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\bin\Debug\net5.0-windows\Elevators Tilin.deps.json
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\bin\Debug\net5.0-windows\Elevators Tilin.runtimeconfig.json
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\bin\Debug\net5.0-windows\Elevators Tilin.runtimeconfig.dev.json
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\bin\Debug\net5.0-windows\Elevators Tilin.dll
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\bin\Debug\net5.0-windows\ref\Elevators Tilin.dll
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\bin\Debug\net5.0-windows\Elevators Tilin.pdb
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.dll
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\ref\Elevators Tilin.dll
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.pdb
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators Tilin.genruntimeconfig.cache
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.Properties.Resources.resources
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmInventory.resources
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmMaintenance.resources
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmRegister.resources
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmRepair.resources
