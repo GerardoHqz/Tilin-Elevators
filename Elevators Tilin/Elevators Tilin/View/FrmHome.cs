@@ -118,6 +118,13 @@ namespace Elevators_Tilin.View
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmSearch(), sender);
+            lblTitle.Text = "Buscador";
+            lblTitle.Location = new Point(300, 12);
+            this.Show();
+        }
 
         private void Reset()
         {
@@ -129,11 +136,13 @@ namespace Elevators_Tilin.View
             currentButton = null;
             btnClose.Visible = false;
         }
-        private void btnClose_Click(object sender, EventArgs e)
+
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
             if (activeForm != null)
                 activeForm.Close();
             Reset();
         }
+
     }
 }

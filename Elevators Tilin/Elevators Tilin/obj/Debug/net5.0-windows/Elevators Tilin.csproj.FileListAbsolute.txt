@@ -21,3 +21,4 @@ C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tili
 C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmMaintenance.resources
 C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmRegister.resources
 C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmRepair.resources
+C:\Users\gerar\Pictures\Workspace\Tilin-Elevators\Elevators Tilin\Elevators Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmSearch.resources

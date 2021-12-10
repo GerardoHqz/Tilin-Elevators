@@ -45,6 +45,9 @@ namespace Elevators_Tilin.View
             this.lbl4 = new System.Windows.Forms.Label();
             this.dtpFinishcontract = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbType
@@ -53,26 +56,29 @@ namespace Elevators_Tilin.View
             this.cmbType.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbType.Location = new System.Drawing.Point(300, 157);
+            this.cmbType.Location = new System.Drawing.Point(183, 87);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(236, 28);
+            this.cmbType.Size = new System.Drawing.Size(192, 23);
             this.cmbType.TabIndex = 9;
             // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(172, 160);
+            this.lbl2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl2.Location = new System.Drawing.Point(71, 89);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(114, 20);
+            this.lbl2.Size = new System.Drawing.Size(108, 17);
             this.lbl2.TabIndex = 8;
             this.lbl2.Text = "Tipo de Equipo:";
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(144, 106);
+            this.lbl1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl1.Location = new System.Drawing.Point(47, 49);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(142, 20);
+            this.lbl1.Size = new System.Drawing.Size(134, 17);
             this.lbl1.TabIndex = 11;
             this.lbl1.Text = "Numero del equipo:";
             // 
@@ -81,17 +87,19 @@ namespace Elevators_Tilin.View
             this.txtNumberRegister.AcceptsTab = true;
             this.txtNumberRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumberRegister.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNumberRegister.Location = new System.Drawing.Point(300, 99);
+            this.txtNumberRegister.Location = new System.Drawing.Point(183, 43);
+            this.txtNumberRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumberRegister.Name = "txtNumberRegister";
-            this.txtNumberRegister.Size = new System.Drawing.Size(203, 27);
+            this.txtNumberRegister.Size = new System.Drawing.Size(192, 23);
             this.txtNumberRegister.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(150, 217);
+            this.label1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(44, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.Size = new System.Drawing.Size(133, 17);
             this.label1.TabIndex = 13;
             this.label1.Text = "Numero de niveles:";
             // 
@@ -100,17 +108,19 @@ namespace Elevators_Tilin.View
             this.txtLevels.AcceptsTab = true;
             this.txtLevels.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLevels.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLevels.Location = new System.Drawing.Point(300, 210);
+            this.txtLevels.Location = new System.Drawing.Point(183, 191);
+            this.txtLevels.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLevels.Name = "txtLevels";
-            this.txtLevels.Size = new System.Drawing.Size(121, 27);
+            this.txtLevels.Size = new System.Drawing.Size(192, 23);
             this.txtLevels.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 269);
+            this.label2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(103, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 15;
             this.label2.Text = "Velocidad:";
             // 
@@ -119,17 +129,19 @@ namespace Elevators_Tilin.View
             this.txtSpeed.AcceptsTab = true;
             this.txtSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSpeed.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSpeed.Location = new System.Drawing.Point(300, 262);
+            this.txtSpeed.Location = new System.Drawing.Point(183, 239);
+            this.txtSpeed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSpeed.Name = "txtSpeed";
-            this.txtSpeed.Size = new System.Drawing.Size(121, 27);
+            this.txtSpeed.Size = new System.Drawing.Size(105, 23);
             this.txtSpeed.TabIndex = 14;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(228, 316);
+            this.label3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(123, 294);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "Voltaje:";
             // 
@@ -138,17 +150,19 @@ namespace Elevators_Tilin.View
             this.txtVoltage.AcceptsTab = true;
             this.txtVoltage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVoltage.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtVoltage.Location = new System.Drawing.Point(300, 309);
+            this.txtVoltage.Location = new System.Drawing.Point(185, 289);
+            this.txtVoltage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVoltage.Name = "txtVoltage";
-            this.txtVoltage.Size = new System.Drawing.Size(121, 27);
+            this.txtVoltage.Size = new System.Drawing.Size(105, 23);
             this.txtVoltage.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(211, 369);
+            this.label4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(103, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(74, 17);
             this.label4.TabIndex = 19;
             this.label4.Text = "Dirección:";
             // 
@@ -157,51 +171,77 @@ namespace Elevators_Tilin.View
             this.txtDirection.AcceptsTab = true;
             this.txtDirection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDirection.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDirection.Location = new System.Drawing.Point(300, 362);
+            this.txtDirection.Location = new System.Drawing.Point(185, 136);
+            this.txtDirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDirection.Name = "txtDirection";
-            this.txtDirection.Size = new System.Drawing.Size(121, 27);
+            this.txtDirection.Size = new System.Drawing.Size(289, 23);
             this.txtDirection.TabIndex = 18;
             // 
             // dtpStartcontract
             // 
             this.dtpStartcontract.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartcontract.Location = new System.Drawing.Point(300, 420);
+            this.dtpStartcontract.Location = new System.Drawing.Point(681, 43);
+            this.dtpStartcontract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStartcontract.Name = "dtpStartcontract";
-            this.dtpStartcontract.Size = new System.Drawing.Size(121, 27);
+            this.dtpStartcontract.Size = new System.Drawing.Size(106, 23);
             this.dtpStartcontract.TabIndex = 21;
             // 
             // lbl4
             // 
             this.lbl4.AutoSize = true;
-            this.lbl4.Location = new System.Drawing.Point(94, 420);
+            this.lbl4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl4.Location = new System.Drawing.Point(488, 43);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(192, 20);
+            this.lbl4.Size = new System.Drawing.Size(187, 17);
             this.lbl4.TabIndex = 20;
             this.lbl4.Text = "Fecha de inicio de contrato:";
             // 
             // dtpFinishcontract
             // 
             this.dtpFinishcontract.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFinishcontract.Location = new System.Drawing.Point(300, 469);
+            this.dtpFinishcontract.Location = new System.Drawing.Point(681, 89);
+            this.dtpFinishcontract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFinishcontract.Name = "dtpFinishcontract";
-            this.dtpFinishcontract.Size = new System.Drawing.Size(121, 27);
+            this.dtpFinishcontract.Size = new System.Drawing.Size(106, 23);
             this.dtpFinishcontract.TabIndex = 23;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(94, 469);
+            this.label5.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(497, 93);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 20);
+            this.label5.Size = new System.Drawing.Size(169, 17);
             this.label5.TabIndex = 22;
             this.label5.Text = "Fecha de fin de contrato:";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(183, 351);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 49);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Registrar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Elevators_Tilin.Properties.Resources.imgRegistro;
+            this.pictureBox1.Location = new System.Drawing.Point(511, 167);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(276, 276);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(965, 635);
+            this.ClientSize = new System.Drawing.Size(844, 476);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpFinishcontract);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpStartcontract);
@@ -218,8 +258,11 @@ namespace Elevators_Tilin.View
             this.Controls.Add(this.txtNumberRegister);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.lbl2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmRegister";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.FrmRegister_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,5 +286,7 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.DateTimePicker dtpFinishcontract;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

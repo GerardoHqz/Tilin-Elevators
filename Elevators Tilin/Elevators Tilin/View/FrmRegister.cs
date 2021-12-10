@@ -16,5 +16,26 @@ namespace Elevators_Tilin.View
         {
             InitializeComponent();
         }
+
+        private void FrmRegister_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
+
+        //Metodo para cambiar de colores los botones
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = Extras.ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = Extras.ThemeColor.SecundaryColor;
+                }
+            }
+        }
+
     }
 }

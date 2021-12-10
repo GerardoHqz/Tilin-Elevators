@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yfQIGbVuBW1Re89eFZbUE6RgclsoH8uViQz+R7EcmdDK/GHcq+yWXZsee5JD6+8xYWuc5JUuQNd2FTzZ3wB2Hw==",
+  "dgSpecHash": "UuEMdp0ZXmDty1IVROU08Hza8Tl0QiNV8n1/1Tu9LuD9xxdwzW4vSQoIBhWtsID7WhR5mBAZDlfeKU7PeA0MUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paolo\\Desktop\\Work\\1\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\gerar\\Pictures\\Workspace\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
