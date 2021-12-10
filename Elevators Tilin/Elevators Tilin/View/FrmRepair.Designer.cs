@@ -30,6 +30,7 @@ namespace Elevators_Tilin.View
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.dtpMaintain = new System.Windows.Forms.DateTimePicker();
             this.lbl6 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace Elevators_Tilin.View
             this.lbl2 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lbl5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,17 +65,27 @@ namespace Elevators_Tilin.View
             this.panel1.Controls.Add(this.lbl5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(700, 338);
             this.panel1.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(193, 177);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(460, 23);
+            this.textBox1.TabIndex = 9;
             // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Location = new System.Drawing.Point(618, 360);
+            this.btnRegister.Location = new System.Drawing.Point(541, 270);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(128, 56);
+            this.btnRegister.Size = new System.Drawing.Size(112, 42);
             this.btnRegister.TabIndex = 8;
             this.btnRegister.Text = "Registrar";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -83,18 +93,19 @@ namespace Elevators_Tilin.View
             // dtpMaintain
             // 
             this.dtpMaintain.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMaintain.Location = new System.Drawing.Point(221, 173);
+            this.dtpMaintain.Location = new System.Drawing.Point(193, 130);
+            this.dtpMaintain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpMaintain.Name = "dtpMaintain";
-            this.dtpMaintain.Size = new System.Drawing.Size(121, 27);
+            this.dtpMaintain.Size = new System.Drawing.Size(106, 23);
             this.dtpMaintain.TabIndex = 3;
             // 
             // lbl6
             // 
             this.lbl6.AutoSize = true;
             this.lbl6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl6.Location = new System.Drawing.Point(50, 236);
+            this.lbl6.Location = new System.Drawing.Point(44, 177);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(153, 20);
+            this.lbl6.Size = new System.Drawing.Size(122, 15);
             this.lbl6.TabIndex = 2;
             this.lbl6.Text = "Repuestos necesarios:";
             // 
@@ -102,9 +113,9 @@ namespace Elevators_Tilin.View
             // 
             this.lbl4.AutoSize = true;
             this.lbl4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl4.Location = new System.Drawing.Point(50, 175);
+            this.lbl4.Location = new System.Drawing.Point(44, 131);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(162, 20);
+            this.lbl4.Size = new System.Drawing.Size(128, 15);
             this.lbl4.TabIndex = 2;
             this.lbl4.Text = "Fecha de la reparación:";
             // 
@@ -114,27 +125,29 @@ namespace Elevators_Tilin.View
             this.cmbState.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbState.Location = new System.Drawing.Point(221, 107);
+            this.cmbState.Location = new System.Drawing.Point(193, 80);
+            this.cmbState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(121, 28);
+            this.cmbState.Size = new System.Drawing.Size(106, 23);
             this.cmbState.TabIndex = 7;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl1.Location = new System.Drawing.Point(50, 46);
+            this.lbl1.Location = new System.Drawing.Point(44, 34);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(142, 20);
+            this.lbl1.Size = new System.Drawing.Size(113, 15);
             this.lbl1.TabIndex = 1;
             this.lbl1.Text = "Numero del equipo:";
             // 
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(246, 295);
+            this.txtName.Location = new System.Drawing.Point(215, 221);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(500, 27);
+            this.txtName.Size = new System.Drawing.Size(438, 23);
             this.txtName.TabIndex = 6;
             // 
             // txtEquipNumber
@@ -142,61 +155,57 @@ namespace Elevators_Tilin.View
             this.txtEquipNumber.AcceptsTab = true;
             this.txtEquipNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEquipNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEquipNumber.Location = new System.Drawing.Point(221, 44);
+            this.txtEquipNumber.Location = new System.Drawing.Point(193, 33);
+            this.txtEquipNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEquipNumber.Name = "txtEquipNumber";
-            this.txtEquipNumber.Size = new System.Drawing.Size(121, 27);
+            this.txtEquipNumber.Size = new System.Drawing.Size(106, 23);
             this.txtEquipNumber.TabIndex = 0;
             // 
             // lbl3
             // 
             this.lbl3.AutoSize = true;
             this.lbl3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl3.Location = new System.Drawing.Point(425, 46);
+            this.lbl3.Location = new System.Drawing.Point(372, 34);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(267, 20);
+            this.lbl3.Size = new System.Drawing.Size(208, 15);
             this.lbl3.TabIndex = 4;
             this.lbl3.Text = "Descripción de la reparacíon realizada:";
             // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(50, 110);
+            this.lbl2.Location = new System.Drawing.Point(44, 82);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(133, 20);
+            this.lbl2.Size = new System.Drawing.Size(104, 15);
             this.lbl2.TabIndex = 1;
             this.lbl2.Text = "Estado del equipo:";
             // 
             // txtDescription
             // 
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescription.Location = new System.Drawing.Point(425, 69);
+            this.txtDescription.Location = new System.Drawing.Point(372, 52);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(321, 131);
+            this.txtDescription.Size = new System.Drawing.Size(281, 99);
             this.txtDescription.TabIndex = 5;
             // 
             // lbl5
             // 
             this.lbl5.AutoSize = true;
-            this.lbl5.Location = new System.Drawing.Point(50, 295);
+            this.lbl5.Location = new System.Drawing.Point(44, 221);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(179, 20);
+            this.lbl5.Size = new System.Drawing.Size(139, 15);
             this.lbl5.TabIndex = 0;
             this.lbl5.Text = "Reparación realizada por:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(221, 236);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 27);
-            this.textBox1.TabIndex = 9;
-            // 
             // FrmRepair
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmRepair";
             this.Text = "FrmRepair";
             this.panel1.ResumeLayout(false);
