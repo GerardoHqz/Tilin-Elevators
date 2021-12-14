@@ -1,7 +1,6 @@
-﻿
-namespace Elevators_Tilin.View
+﻿namespace Elevators_Tilin.View
 {
-    partial class FrmSearch
+    partial class FrmServices
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +28,23 @@ namespace Elevators_Tilin.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.dgvInformation = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtName
+            // dgvInformation
             // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(302, 91);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(381, 27);
-            this.txtName.TabIndex = 1;
+            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformation.Location = new System.Drawing.Point(54, 164);
+            this.dgvInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvInformation.Name = "dgvInformation";
+            this.dgvInformation.RowHeadersWidth = 51;
+            this.dgvInformation.RowTemplate.Height = 25;
+            this.dgvInformation.Size = new System.Drawing.Size(843, 412);
+            this.dgvInformation.TabIndex = 7;
             // 
             // btnClose
             // 
@@ -52,47 +53,47 @@ namespace Elevators_Tilin.View
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(706, 67);
+            this.btnClose.Location = new System.Drawing.Point(710, 56);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(69, 72);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.TabIndex = 6;
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // dgvInformation
+            // txtName
             // 
-            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformation.Location = new System.Drawing.Point(50, 175);
-            this.dgvInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvInformation.Name = "dgvInformation";
-            this.dgvInformation.RowHeadersWidth = 51;
-            this.dgvInformation.RowTemplate.Height = 25;
-            this.dgvInformation.Size = new System.Drawing.Size(843, 412);
-            this.dgvInformation.TabIndex = 3;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Location = new System.Drawing.Point(306, 80);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(381, 27);
+            this.txtName.TabIndex = 5;
             // 
-            // label1
+            // cmbType
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(203, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Repuestos:";
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
+            "Elevador",
+            "Vehículo"});
+            this.cmbType.Location = new System.Drawing.Point(154, 78);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(134, 28);
+            this.cmbType.TabIndex = 4;
             // 
-            // FrmSearch
+            // FrmServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 632);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvInformation);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtName);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmSearch";
-            this.Text = "FrmSearch";
+            this.Controls.Add(this.cmbType);
+            this.Name = "FrmServices";
+            this.Text = "FrmServices";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,9 +101,10 @@ namespace Elevators_Tilin.View
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btnClose;
+
         private System.Windows.Forms.DataGridView dgvInformation;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.ComboBox cmbType;
     }
 }

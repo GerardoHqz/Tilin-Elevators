@@ -95,6 +95,14 @@ namespace Elevators_Tilin.View
             this.Show();
         }
 
+        private void btnVehicle_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmVehicle(), sender);
+            lblTitle.Text = "Registrar Automovil";
+            lblTitle.Location = new Point(300, 12);
+            this.Show();
+        }
+
         private void BtnMaintenance_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmMaintenance(), sender);
@@ -144,5 +152,12 @@ namespace Elevators_Tilin.View
             Reset();
         }
 
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmServices(), sender);
+            lblTitle.Text = "Inventario";
+            lblTitle.Location = new Point(300, 12);
+            this.Show();
+        }
     }
 }

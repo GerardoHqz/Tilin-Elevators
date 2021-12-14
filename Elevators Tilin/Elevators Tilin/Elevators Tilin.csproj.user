@@ -19,5 +19,11 @@
     <Compile Update="View\FrmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FrmServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FrmVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
