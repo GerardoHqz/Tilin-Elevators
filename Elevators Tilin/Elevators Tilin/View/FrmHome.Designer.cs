@@ -31,6 +31,7 @@ namespace Elevators_Tilin.View
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.pnlMainMenu = new System.Windows.Forms.Panel();
+            this.btnServices = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace Elevators_Tilin.View
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.pctHome1 = new System.Windows.Forms.PictureBox();
-            this.btnServices = new System.Windows.Forms.Button();
             this.pnlMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlLogo.SuspendLayout();
@@ -72,6 +72,27 @@ namespace Elevators_Tilin.View
             this.pnlMainMenu.Name = "pnlMainMenu";
             this.pnlMainMenu.Size = new System.Drawing.Size(248, 791);
             this.pnlMainMenu.TabIndex = 0;
+            // 
+            // btnServices
+            // 
+            this.btnServices.BackColor = System.Drawing.Color.Transparent;
+            this.btnServices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServices.FlatAppearance.BorderSize = 0;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnServices.ForeColor = System.Drawing.Color.White;
+            this.btnServices.Image = global::Elevators_Tilin.Properties.Resources.imgLupa;
+            this.btnServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServices.Location = new System.Drawing.Point(0, 607);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(248, 83);
+            this.btnServices.TabIndex = 17;
+            this.btnServices.Text = "Servicios";
+            this.btnServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnServices.UseVisualStyleBackColor = false;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
             // 
             // button2
             // 
@@ -172,7 +193,7 @@ namespace Elevators_Tilin.View
             this.btnVehicle.Name = "btnVehicle";
             this.btnVehicle.Size = new System.Drawing.Size(248, 83);
             this.btnVehicle.TabIndex = 8;
-            this.btnVehicle.Text = "Automovil      ";
+            this.btnVehicle.Text = "Vehículo   ";
             this.btnVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehicle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVehicle.UseVisualStyleBackColor = false;
@@ -285,27 +306,6 @@ namespace Elevators_Tilin.View
             this.pctHome1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctHome1.TabIndex = 0;
             this.pctHome1.TabStop = false;
-            // 
-            // btnServices
-            // 
-            this.btnServices.BackColor = System.Drawing.Color.Transparent;
-            this.btnServices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnServices.FlatAppearance.BorderSize = 0;
-            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServices.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnServices.ForeColor = System.Drawing.Color.White;
-            this.btnServices.Image = global::Elevators_Tilin.Properties.Resources.imgLupa;
-            this.btnServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServices.Location = new System.Drawing.Point(0, 607);
-            this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(248, 83);
-            this.btnServices.TabIndex = 17;
-            this.btnServices.Text = "Servicios";
-            this.btnServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnServices.UseVisualStyleBackColor = false;
-            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
             // 
             // FrmHome
             // 

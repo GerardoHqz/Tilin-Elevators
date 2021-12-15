@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paolo\\Desktop\\Work\\gitwork\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj": {}
+    "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paolo\\Desktop\\Work\\gitwork\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj": {
+    "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paolo\\Desktop\\Work\\gitwork\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
+        "projectUniqueName": "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
         "projectName": "Elevators Tilin",
-        "projectPath": "C:\\Users\\paolo\\Desktop\\Work\\gitwork\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
+        "projectPath": "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
         "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paolo\\Desktop\\Work\\gitwork\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\obj\\",
+        "outputPath": "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,13 +48,15 @@
               "target": "Package",
               "version": "[5.0.12, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.12, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[1.1.6, )"
+              "version": "[5.0.12, )"
             }
           },
           "imports": [
