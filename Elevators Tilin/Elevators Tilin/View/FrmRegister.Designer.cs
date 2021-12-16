@@ -43,7 +43,7 @@ namespace Elevators_Tilin.View
             this.lbl4 = new System.Windows.Forms.Label();
             this.dtpFinishcontract = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,7 +160,7 @@ namespace Elevators_Tilin.View
             // 
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl4.Location = new System.Drawing.Point(558, 57);
+            this.lbl4.Location = new System.Drawing.Point(534, 61);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(243, 22);
             this.lbl4.TabIndex = 20;
@@ -178,22 +178,23 @@ namespace Elevators_Tilin.View
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(568, 124);
+            this.label5.Location = new System.Drawing.Point(557, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(220, 22);
             this.label5.TabIndex = 22;
             this.label5.Text = "Fecha de fin de contrato:";
             // 
-            // button1
+            // btnRegister
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(209, 468);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 65);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Location = new System.Drawing.Point(209, 468);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(171, 65);
+            this.btnRegister.TabIndex = 24;
+            this.btnRegister.Text = "Registrar";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // pictureBox1
             // 
@@ -212,7 +213,7 @@ namespace Elevators_Tilin.View
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(965, 635);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.dtpFinishcontract);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpStartcontract);
@@ -251,7 +252,7 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.DateTimePicker dtpFinishcontract;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

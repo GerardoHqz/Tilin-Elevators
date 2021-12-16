@@ -42,14 +42,14 @@ namespace Elevators_Tilin.View
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lbl5 = new System.Windows.Forms.Label();
             this.cmbParts = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvParts = new System.Windows.Forms.DataGridView();
             this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnAdd = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@ namespace Elevators_Tilin.View
             this.btnRegister.TabIndex = 21;
             this.btnRegister.Text = "Registrar";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRepair_Click);
             // 
             // dtpRepair
             // 
@@ -185,19 +186,19 @@ namespace Elevators_Tilin.View
             this.cmbParts.Size = new System.Drawing.Size(345, 28);
             this.cmbParts.TabIndex = 22;
             // 
-            // dataGridView1
+            // dgvParts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColName,
             this.ColCant});
-            this.dataGridView1.Location = new System.Drawing.Point(58, 413);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(546, 191);
-            this.dataGridView1.TabIndex = 23;
+            this.dgvParts.Location = new System.Drawing.Point(58, 413);
+            this.dgvParts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvParts.Name = "dgvParts";
+            this.dgvParts.RowHeadersWidth = 51;
+            this.dgvParts.RowTemplate.Height = 25;
+            this.dgvParts.Size = new System.Drawing.Size(546, 191);
+            this.dgvParts.TabIndex = 23;
             // 
             // ColName
             // 
@@ -226,13 +227,13 @@ namespace Elevators_Tilin.View
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtQuantity
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(259, 348);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 27);
-            this.textBox1.TabIndex = 25;
+            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuantity.Location = new System.Drawing.Point(259, 348);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(133, 27);
+            this.txtQuantity.TabIndex = 25;
             // 
             // label1
             // 
@@ -245,17 +246,18 @@ namespace Elevators_Tilin.View
             this.label1.TabIndex = 14;
             this.label1.Text = "Cantidad:";
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.BackgroundImage = global::Elevators_Tilin.Properties.Resources.btnAddFn;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(443, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 26;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.BackgroundImage = global::Elevators_Tilin.Properties.Resources.btnAddFn;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Location = new System.Drawing.Point(443, 335);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(50, 50);
+            this.btnAdd.TabIndex = 26;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // FrmRepair
             // 
@@ -263,10 +265,10 @@ namespace Elevators_Tilin.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 632);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvParts);
             this.Controls.Add(this.cmbParts);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.dtpRepair);
@@ -284,7 +286,7 @@ namespace Elevators_Tilin.View
             this.Name = "FrmRepair";
             this.Text = "FrmRepair";
             this.Load += new System.EventHandler(this.FrmRepair_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,12 +308,12 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.ComboBox cmbParts;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvParts;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCant;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
