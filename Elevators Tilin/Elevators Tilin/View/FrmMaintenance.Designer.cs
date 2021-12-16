@@ -78,6 +78,7 @@ namespace Elevators_Tilin.View
             // 
             // cmbState
             // 
+            this.cmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbState.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbState.FormattingEnabled = true;
             this.cmbState.Items.AddRange(new object[] {

@@ -60,6 +60,8 @@ namespace Elevators_Tilin.View
         
         private void Maintenance()
         {
+
+  
             //Creando y Guardando los datos en la base de datos
                 string equipNumber = txtEquipNumber.Text;
                 string description = txtDescription.Text;
@@ -71,49 +73,80 @@ namespace Elevators_Tilin.View
 
                 using (var db = new SIAL_DBContext())
                 {
+                    bool verify = true;
+                    bool verify2 = true;
+
+
                     //obtenieniendo el id del equipo y/o automovil
                     List<Equipo> equipos = db.Equipos.ToList();
                     List<Automovil> automoviles = db.Automovils.ToList();
                     List<Equipo> exist = equipos.Where(x => x.NumeroSerie == equipNumber).ToList();
+
                     
                     foreach (var item in equipos)
                     {
                         if (item.NumeroSerie == equipNumber)
-                            id_equipo = item.Id;
+                        {
+
+                            //agregando el registro de mantenimiento
+                            Mantenimiento unMantenimiento = new Mantenimiento
+                            {
+                                FechaMantenimiento = date,
+                                NumeroSerie = equipNumber,
+                                Descripcion = description,
+                                Tecnico = name,
+                                Estado = state,
+                                IdEquipo = item.Id,
+                                IdAutomovil = null
+                            };
+                            db.Add(unMantenimiento);
+                            db.SaveChanges();
+                            MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else { verify = false; }
                     }
-                
+
                     foreach (var item in automoviles)
                     {
                         if (item.Placa == equipNumber)
-                        { 
-                            id_automovil = item.Id;
-                            MessageBox.Show(item.Id.ToString(), "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        {
+                            //agregando el registro de mantenimiento
+                            Mantenimiento unMantenimiento = new Mantenimiento
+                            {
+                                FechaMantenimiento = date,
+                                NumeroSerie = equipNumber,
+                                Descripcion = description,
+                                Tecnico = name,
+                                Estado = state,
+                                IdEquipo = null,
+                                IdAutomovil = item.Id
+                            };
+                            db.Add(unMantenimiento);
+                            db.SaveChanges();
+                            MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else { verify2 = false; }
 
                     }
 
 
-                }
-                    
-                    //agregando el registro de mantenimiento
-                    Mantenimiento unMantenimiento = new Mantenimiento
+                    if (!verify && !verify2)
                     {
-                        FechaMantenimiento = date,
-                        NumeroSerie = equipNumber,
-                        Descripcion = description,
-                        Tecnico = name,
-                        Estado = state,
-                        IdEquipo = id_equipo,
-                        IdAutomovil = id_automovil
-                    };
+                    MessageBox.Show("El numero de serie no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
-                    //Si pasa error entonces ocupamos dos if validando si es equipo o automovil
 
-                    db.Add(unMantenimiento);
-                    db.SaveChanges();
-                    MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Si pasa error entonces ocupamos dos if validando si es equipo o automovil
 
-            }
+
+
+            }   
+
+
         }
+    
 
         private void Clear()
         {
