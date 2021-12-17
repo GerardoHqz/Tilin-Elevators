@@ -3,11 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using Elevators_Tilin.ContextSIAL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -62,7 +57,7 @@ namespace Elevators_Tilin.View
             int cant = Convert.ToInt32(txtQuantity.Text);
             List<Repuesto> exist = repuestos.Where(x => x.Nombre == cmbParts.Text && x.Cantidad>=cant).ToList();
             bool verification = cant > 0;
-            if(cant == 0)
+            if(cant < 0)
             {
                 MessageBox.Show("La cantidad debe ser mayor a 0");
             }
@@ -89,29 +84,66 @@ namespace Elevators_Tilin.View
             List<Equipo> equipos = db.Equipos.ToList();
             List<Equipo> exist = equipos.Where(u => u.NumeroSerie == txtEquipNumber.Text).ToList();
             bool verification = txtEquipNumber.Text.Length > 1 && cmbState.Text.Length > 1 && txtName.Text.Length > 8;
+            bool band = true;
+            bool band2 = true;
 
-            if(verification && exist.Count() > 0){
-                int id = 0;
-                foreach (var item in equipos)
-                {
-                    if (item.NumeroSerie == txtEquipNumber.Text)
-                    {
-                        id = item.Id;
-                    }
-                }
+            if(verification && exist.Count() > 0) {
                 
-                //Añadiendo el registro reparacion
-                Reparacion reparacion = new Reparacion{
-                    FechaReparacion = dtpRepair.Value,
-                    NumeroSerie = txtEquipNumber.Text,
-                    Descripcion = txtDescription.Text,
-                    Tecnico = txtName.Text,
-                    Estado = cmbState.Text,
-                    IdEquipo = id,
-                };
-                db.Reparacions.Add(reparacion);
-                db.SaveChanges();
+                if(cmbType.Text == "Elevador"){
+                    int id = 0;
+                    foreach (var item in equipos)
+                    {
+                        if (item.NumeroSerie == txtEquipNumber.Text)
+                        {
+                            id = item.Id;
+                        }
+                        else{
+                            band=false;
+                        }
+                    }
 
+                    //Añadiendo el registro reparacion
+                    Reparacion reparacion = new Reparacion{
+                        FechaReparacion = dtpRepair.Value,
+                        NumeroSerie = txtEquipNumber.Text,
+                        Descripcion = txtDescription.Text,
+                        Tecnico = txtName.Text,
+                        Estado = cmbState.Text,
+                        IdEquipo = id,
+                        IdAutomovil = null
+                    };
+                    db.Reparacions.Add(reparacion);
+                    db.SaveChanges();
+                    
+                }
+                else{
+                    int id = 0;
+                    foreach (var item in equipos)
+                    {
+                        if (item.NumeroSerie == txtEquipNumber.Text)
+                        {
+                            id = item.Id;
+                        }
+                        else{
+                            band2 = false;
+                        }
+                    }
+
+                    //Añadiendo el registro reparacion
+                    Reparacion reparacion = new Reparacion{
+                        FechaReparacion = dtpRepair.Value,
+                        NumeroSerie = txtEquipNumber.Text,
+                        Descripcion = txtDescription.Text,
+                        Tecnico = txtName.Text,
+                        Estado = cmbState.Text,
+                        IdEquipo = null,
+                        IdAutomovil = id
+                    };
+                    db.Reparacions.Add(reparacion);
+                    db.SaveChanges();
+                }
+
+                //Mandamos los datos a ReparacionxRepuesto
                 var db2 = new SIAL_DBContext();
                 List<Reparacion> reparaciones2 = db2.Reparacions.ToList();
                 int idReparacion = 0;
@@ -144,9 +176,25 @@ namespace Elevators_Tilin.View
                     db.SaveChanges();
                 }
 
-                MessageBox.Show("Reparacion registrada correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 //Falta  actualizar el inventario de repuestos
+                for(int i=0; i < dgvParts.Rows.Count; i++){
+                    foreach(var item in repuestos){
+                        if(item.Nombre == dgvParts.Rows[i].Cells[0].Value.ToString()){
+                            int auxCant = Convert.ToInt32(dgvParts.Rows[i].Cells[2].Value.ToString());
+                            item.Cantidad -=  auxCant;
+                            db.Update(item);
+                            db.SaveChanges();
+                        }
+                    }
+                }
+            }
+
+            if(band == false || band2 == false){
+                MessageBox.Show("Numero de serie o placa no existente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+            else{
+                MessageBox.Show("Reparacion registrada correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -169,5 +217,7 @@ namespace Elevators_Tilin.View
             Repair();
             Clear();
         }
+
+        
     }
 }

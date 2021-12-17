@@ -103,7 +103,7 @@ namespace Elevators_Tilin.View
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Elevators_Tilin.Properties.Resources.imgLupa;
+            this.button2.Image = global::Elevators_Tilin.Properties.Resources.bucanding;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 524);
             this.button2.Name = "button2";

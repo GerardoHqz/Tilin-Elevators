@@ -32,6 +32,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.cmbType = new System.Windows.Forms.ComboBox();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,27 +44,27 @@
             this.dgvInformation.Name = "dgvInformation";
             this.dgvInformation.RowHeadersWidth = 51;
             this.dgvInformation.RowTemplate.Height = 25;
-            this.dgvInformation.Size = new System.Drawing.Size(843, 412);
+            this.dgvInformation.Size = new System.Drawing.Size(851, 409);
             this.dgvInformation.TabIndex = 7;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Azure;
-            this.btnClose.BackgroundImage = global::Elevators_Tilin.Properties.Resources.lupita;
+            this.btnClose.BackgroundImage = global::Elevators_Tilin.Properties.Resources.search3;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(710, 56);
+            this.btnClose.Location = new System.Drawing.Point(672, 84);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(69, 72);
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
             this.btnClose.TabIndex = 6;
             this.btnClose.UseVisualStyleBackColor = false;
             // 
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(306, 80);
+            this.txtName.Location = new System.Drawing.Point(285, 86);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(381, 27);
@@ -76,11 +77,23 @@
             this.cmbType.Items.AddRange(new object[] {
             "Elevador",
             "Vehículo"});
-            this.cmbType.Location = new System.Drawing.Point(154, 78);
+            this.cmbType.Location = new System.Drawing.Point(129, 84);
             this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(134, 28);
             this.cmbType.TabIndex = 4;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackgroundImage = global::Elevators_Tilin.Properties.Resources.excel;
+            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Location = new System.Drawing.Point(800, 76);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(66, 49);
+            this.btnExcel.TabIndex = 8;
+            this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // FrmServices
             // 
@@ -88,6 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 632);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.dgvInformation);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtName);
@@ -106,5 +120,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

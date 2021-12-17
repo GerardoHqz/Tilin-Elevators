@@ -138,16 +138,12 @@ namespace Elevators_Tilin.View
                     }
 
 
+                }
+                
                 //Si pasa error entonces ocupamos dos if validando si es equipo o automovil
-
-
-
             }   
 
-
-        }
-    
-
+            
         private void Clear()
         {
             txtEquipNumber.Text = "";
@@ -156,5 +152,5 @@ namespace Elevators_Tilin.View
             cmbState.Text = "";
             dtpMaintain.Value = DateTime.Now;
         }
-    }
+    }  
 }

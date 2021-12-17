@@ -73,6 +73,16 @@ namespace Elevators_Tilin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bucanding {
+            get {
+                object obj = ResourceManager.GetObject("bucanding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_grey {
             get {
                 object obj = ResourceManager.GetObject("close_grey", resourceCulture);
@@ -86,6 +96,16 @@ namespace Elevators_Tilin.Properties {
         internal static System.Drawing.Bitmap elevatorico {
             get {
                 object obj = ResourceManager.GetObject("elevatorico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap excel {
+            get {
+                object obj = ResourceManager.GetObject("excel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +266,26 @@ namespace Elevators_Tilin.Properties {
         internal static System.Drawing.Bitmap registrar {
             get {
                 object obj = ResourceManager.GetObject("registrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search3 {
+            get {
+                object obj = ResourceManager.GetObject("search3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search31 {
+            get {
+                object obj = ResourceManager.GetObject("search31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

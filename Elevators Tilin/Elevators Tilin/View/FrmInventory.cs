@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elevators_Tilin.ContextSIAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,78 @@ namespace Elevators_Tilin.View
         private void FrmInventory_Load(object sender, EventArgs e)
         {
             LoadTheme();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            bool verification =
+                txtNameSpareParts.Text.Length > 0 &&
+                txtNumberSparePart.Text.Length > 0 &&
+                txtAmount.Text.Length > 0 &&
+                txtDescriptionInventory.Text.Length > 0 &&
+                txtManufacturer.Text.Length > 0 &&
+                txtSupply.Text.Length > 0 &&
+                txtModel.Text.Length > 0;
+                
+
+            if (verification)
+            {
+                RegisterInventory();
+                Clear();
+            }
+            else
+            {
+                MessageBox.Show("Rellene y verifique que los datos sean correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        
+        private void RegisterInventory()
+        {
+            //Creando y guardando los datos en la base de datos
+            string nameSpareParts = txtNameSpareParts.Text;
+            string numberSparePart = txtNumberSparePart.Text; 
+            int amount = Convert.ToInt32(txtAmount.Text);   
+            string descriptionInventory = txtDescriptionInventory.Text;
+            string manufacturer = txtManufacturer.Text;
+            string model = txtModel.Text;
+            string supply = txtSupply.Text;
+
+            using (var db = new SIAL_DBContext())
+            {
+                //obtenieniendo el id
+                List<Repuesto> repuesto = db.Repuestos.ToList();
+                
+                foreach (var item in repuesto)
+                {
+                    //agregando el registro de mantenimiento
+                        Repuesto unRepuesto = new Repuesto
+                        {
+                            Nombre = nameSpareParts,
+                            NumeroSerie = numberSparePart,
+                            Cantidad = amount,
+                            Descripcion = descriptionInventory,
+                            Fabricante = manufacturer,
+                            Modelo = model,
+                            TiempoSuministro = null
+                        };
+                        
+                        db.Add(unRepuesto);
+                        db.SaveChanges();
+                        MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+        
+
+        private void Clear()
+        {
+            txtNameSpareParts.Text = "";
+            txtNumberSparePart.Text = "";
+            txtAmount.Text = "";
+            txtDescriptionInventory.Text = "";
+            txtManufacturer.Text = "";
+            txtSupply.Text = "";
         }
     }
 }

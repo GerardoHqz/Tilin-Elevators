@@ -64,6 +64,7 @@
             this.btnRegisterVehicle.TabIndex = 42;
             this.btnRegisterVehicle.Text = "Registrar";
             this.btnRegisterVehicle.UseVisualStyleBackColor = true;
+            this.btnRegisterVehicle.Click += new System.EventHandler(this.btnRegisterVehicle_Click);
             // 
             // label4
             // 

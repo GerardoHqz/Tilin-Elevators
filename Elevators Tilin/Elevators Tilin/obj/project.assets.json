@@ -5767,11 +5767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
+      "projectUniqueName": "C:\\Users\\paolo\\Desktop\\Work\\dedito\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
       "projectName": "Elevators Tilin",
-      "projectPath": "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
+      "projectPath": "C:\\Users\\paolo\\Desktop\\Work\\dedito\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\Elevators Tilin.csproj",
       "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paolo\\Desktop\\Work\\pepino\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\obj\\",
+      "outputPath": "C:\\Users\\paolo\\Desktop\\Work\\dedito\\Tilin-Elevators\\Elevators Tilin\\Elevators Tilin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
