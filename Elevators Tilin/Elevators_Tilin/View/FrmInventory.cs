@@ -71,7 +71,7 @@ namespace Elevators_Tilin.View
             string descriptionInventory = txtDescriptionInventory.Text;
             string manufacturer = txtManufacturer.Text;
             string model = txtModel.Text;
-            string supply = txtSupply.Text;
+            string timesupply = txtSupply.Text;
 
             using (var db = new SIAL_DBContext())
             {
@@ -89,7 +89,7 @@ namespace Elevators_Tilin.View
                             Descripcion = descriptionInventory,
                             Fabricante = manufacturer,
                             Modelo = model,
-                            TiempoSuministro = null
+                            TiempoSuministro = timesupply
                         };
                         
                         db.Add(unRepuesto);

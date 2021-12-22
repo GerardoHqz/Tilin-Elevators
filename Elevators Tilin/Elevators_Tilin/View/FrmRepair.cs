@@ -78,7 +78,7 @@ namespace Elevators_Tilin.View
             List<Reparacion> reparaciones = db.Reparacions.ToList();
             List<Equipo> equipos = db.Equipos.ToList();
             List<Equipo> exist = equipos.Where(u => u.NumeroSerie == txtEquipNumber.Text).ToList();
-            bool verification = txtEquipNumber.Text.Length > 1 && cmbState.Text.Length > 1 && txtName.Text.Length > 8;
+            bool verification = txtEquipNumber.Text.Length > 1 && cmbState.Text.Length > 1 && txtName.Text.Length > 1;
             bool band = true;
             bool band2 = true;
 
@@ -107,7 +107,7 @@ namespace Elevators_Tilin.View
                         IdEquipo = id,
                         IdAutomovil = null
                     };
-                    db.Reparacions.Add(reparacion);
+                    db.Add(reparacion);
                     db.SaveChanges();
                     
                 }
@@ -134,7 +134,7 @@ namespace Elevators_Tilin.View
                         IdEquipo = null,
                         IdAutomovil = id
                     };
-                    db.Reparacions.Add(reparacion);
+                    db.Add(reparacion);
                     db.SaveChanges();
                 }
 
@@ -149,14 +149,16 @@ namespace Elevators_Tilin.View
                         idReparacion = item.Id;
                     }
                 }
-
+                
+                //aQUI FALLA
                 List<Repuesto> repuestos = db.Repuestos.ToList();
                 for (int i = 0; i < dgvParts.Rows.Count; i++)
                 {
                     int idRepuesto = 0;
                     foreach (var item in repuestos)
                     {
-                        if (item.Nombre == dgvParts.Rows[i].Cells[0].Value.ToString())
+                        var name = dgvParts.Rows[i].Cells[0].Value.ToString();
+                        if (item.Nombre == name)
                         {
                             idRepuesto = item.Id;
                         }
@@ -167,11 +169,10 @@ namespace Elevators_Tilin.View
                         IdReparacion = idReparacion,
                         IdRepuesto = idRepuesto,
                     };
-                    db.ReparacionxRepuestos.Add(repuesto2);
+                    db.Add(repuesto2);
                     db.SaveChanges();
                 }
 
-                //Falta  actualizar el inventario de repuestos
                 for(int i=0; i < dgvParts.Rows.Count; i++){
                     foreach(var item in repuestos){
                         if(item.Nombre == dgvParts.Rows[i].Cells[0].Value.ToString()){
@@ -183,14 +184,17 @@ namespace Elevators_Tilin.View
                     }
                 }
             }
-
-            if(band == false || band2 == false){
-                MessageBox.Show("Numero de serie o placa no existente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
-            }
             else{
-                MessageBox.Show("Reparacion registrada correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Algo anda mal weon", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // if(band == false || band2 == false){
+            //     MessageBox.Show("Numero de serie o placa no existente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            // }
+            // else{
+            //     MessageBox.Show("Reparacion registrada correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // }
         }
 
         private void Clear()
@@ -205,6 +209,8 @@ namespace Elevators_Tilin.View
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddProduct();
+            cmbParts.Text = "";
+            txtQuantity.Text = "";
         }
 
         private void btnRepair_Click(object sender, EventArgs e)

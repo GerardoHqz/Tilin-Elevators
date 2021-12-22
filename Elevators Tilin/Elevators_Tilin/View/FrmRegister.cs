@@ -40,7 +40,7 @@ namespace Elevators_Tilin.View
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtNumberRegister.Text == string.Empty || txtDirection.Text == string.Empty ||txtLevels.Text == string.Empty || txtSpeed.Text == string.Empty || txtVoltage.Text == string.Empty)
+            if (txtBrand.Text == string.Empty ||  txtNumberRegister.Text == string.Empty || txtDirection.Text == string.Empty ||txtLevels.Text == string.Empty || txtSpeed.Text == string.Empty || txtVoltage.Text == string.Empty)
             {
                 MessageBox.Show("Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -48,6 +48,7 @@ namespace Elevators_Tilin.View
             {
                 string numberRegister = txtNumberRegister.Text;
                 string direction = txtDirection.Text;
+                string Brand = txtBrand.Text;
                 int levels = Convert.ToInt32(txtLevels.Text);
                 double speed = Convert.ToDouble(txtSpeed.Text);
                 double voltage = Convert.ToDouble(txtVoltage.Text);
@@ -70,7 +71,7 @@ namespace Elevators_Tilin.View
                         ContratoFinal=Fecha_fin,
                         ContratoInicio=Fecha_inicio,
                         Direccion=direction,
-                        Marca="",
+                        Marca=Brand,
                         Niveles=levels,
                         NumeroSerie=numberRegister,
                         Velocidad=speed,
@@ -93,6 +94,7 @@ namespace Elevators_Tilin.View
             txtLevels.Text = "";
             txtSpeed.Text = "";
             txtVoltage.Text= "";
+            txtBrand.Text = "";
             dtpStartcontract.Value=DateTime.Now;
             dtpFinishcontract.Value=DateTime.Now;
         }

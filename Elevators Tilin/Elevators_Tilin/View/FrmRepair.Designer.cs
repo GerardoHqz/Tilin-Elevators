@@ -59,9 +59,10 @@ namespace Elevators_Tilin.View
             // 
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Location = new System.Drawing.Point(671, 527);
+            this.btnRegister.Location = new System.Drawing.Point(587, 395);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(207, 64);
+            this.btnRegister.Size = new System.Drawing.Size(181, 48);
             this.btnRegister.TabIndex = 21;
             this.btnRegister.Text = "Registrar";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -70,9 +71,10 @@ namespace Elevators_Tilin.View
             // dtpRepair
             // 
             this.dtpRepair.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRepair.Location = new System.Drawing.Point(259, 237);
+            this.dtpRepair.Location = new System.Drawing.Point(227, 178);
+            this.dtpRepair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRepair.Name = "dtpRepair";
-            this.dtpRepair.Size = new System.Drawing.Size(121, 27);
+            this.dtpRepair.Size = new System.Drawing.Size(106, 23);
             this.dtpRepair.TabIndex = 16;
             // 
             // lbl6
@@ -80,9 +82,9 @@ namespace Elevators_Tilin.View
             this.lbl6.AutoSize = true;
             this.lbl6.BackColor = System.Drawing.Color.White;
             this.lbl6.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl6.Location = new System.Drawing.Point(54, 358);
+            this.lbl6.Location = new System.Drawing.Point(47, 268);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(206, 22);
+            this.lbl6.Size = new System.Drawing.Size(159, 17);
             this.lbl6.TabIndex = 14;
             this.lbl6.Text = "Repuestos necesarios:";
             // 
@@ -91,23 +93,23 @@ namespace Elevators_Tilin.View
             this.lbl4.AutoSize = true;
             this.lbl4.BackColor = System.Drawing.Color.White;
             this.lbl4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl4.Location = new System.Drawing.Point(50, 242);
+            this.lbl4.Location = new System.Drawing.Point(44, 182);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(208, 22);
+            this.lbl4.Size = new System.Drawing.Size(161, 17);
             this.lbl4.TabIndex = 15;
             this.lbl4.Text = "Fecha de la reparación:";
             // 
             // cmbState
             // 
             this.cmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbState.FormattingEnabled = true;
             this.cmbState.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbState.Location = new System.Drawing.Point(259, 175);
+            this.cmbState.Location = new System.Drawing.Point(227, 131);
+            this.cmbState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(121, 28);
+            this.cmbState.Size = new System.Drawing.Size(106, 23);
             this.cmbState.TabIndex = 20;
             // 
             // lbl1
@@ -115,18 +117,19 @@ namespace Elevators_Tilin.View
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.White;
             this.lbl1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl1.Location = new System.Drawing.Point(88, 112);
+            this.lbl1.Location = new System.Drawing.Point(77, 84);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(165, 22);
+            this.lbl1.Size = new System.Drawing.Size(127, 17);
             this.lbl1.TabIndex = 12;
             this.lbl1.Text = "N° de Serie/Placa:";
             // 
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(259, 297);
+            this.txtName.Location = new System.Drawing.Point(227, 223);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(345, 27);
+            this.txtName.Size = new System.Drawing.Size(302, 23);
             this.txtName.TabIndex = 19;
             // 
             // txtEquipNumber
@@ -134,9 +137,10 @@ namespace Elevators_Tilin.View
             this.txtEquipNumber.AcceptsTab = true;
             this.txtEquipNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEquipNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEquipNumber.Location = new System.Drawing.Point(259, 111);
+            this.txtEquipNumber.Location = new System.Drawing.Point(227, 83);
+            this.txtEquipNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEquipNumber.Name = "txtEquipNumber";
-            this.txtEquipNumber.Size = new System.Drawing.Size(121, 27);
+            this.txtEquipNumber.Size = new System.Drawing.Size(106, 23);
             this.txtEquipNumber.TabIndex = 10;
             // 
             // lbl3
@@ -144,9 +148,9 @@ namespace Elevators_Tilin.View
             this.lbl3.AutoSize = true;
             this.lbl3.BackColor = System.Drawing.Color.White;
             this.lbl3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl3.Location = new System.Drawing.Point(464, 47);
+            this.lbl3.Location = new System.Drawing.Point(406, 35);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(338, 22);
+            this.lbl3.Size = new System.Drawing.Size(261, 17);
             this.lbl3.TabIndex = 17;
             this.lbl3.Text = "Descripción de la reparacíon realizada:";
             // 
@@ -154,38 +158,38 @@ namespace Elevators_Tilin.View
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl2.Location = new System.Drawing.Point(89, 178);
+            this.lbl2.Location = new System.Drawing.Point(78, 134);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(169, 22);
+            this.lbl2.Size = new System.Drawing.Size(128, 17);
             this.lbl2.TabIndex = 13;
             this.lbl2.Text = "Estado del equipo:";
             // 
             // txtDescription
             // 
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescription.Location = new System.Drawing.Point(464, 85);
+            this.txtDescription.Location = new System.Drawing.Point(406, 64);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(413, 118);
+            this.txtDescription.Size = new System.Drawing.Size(362, 89);
             this.txtDescription.TabIndex = 18;
             // 
             // lbl5
             // 
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl5.Location = new System.Drawing.Point(81, 297);
+            this.lbl5.Location = new System.Drawing.Point(71, 223);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(180, 22);
+            this.lbl5.Size = new System.Drawing.Size(138, 17);
             this.lbl5.TabIndex = 11;
             this.lbl5.Text = "Nombre del técnico:";
             // 
             // cmbParts
             // 
             this.cmbParts.FormattingEnabled = true;
-            this.cmbParts.Location = new System.Drawing.Point(259, 350);
-            this.cmbParts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbParts.Location = new System.Drawing.Point(227, 262);
             this.cmbParts.Name = "cmbParts";
-            this.cmbParts.Size = new System.Drawing.Size(345, 28);
+            this.cmbParts.Size = new System.Drawing.Size(302, 23);
             this.cmbParts.TabIndex = 22;
             // 
             // dgvParts
@@ -194,12 +198,11 @@ namespace Elevators_Tilin.View
             this.dgvParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColName,
             this.ColCant});
-            this.dgvParts.Location = new System.Drawing.Point(58, 452);
-            this.dgvParts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvParts.Location = new System.Drawing.Point(47, 348);
             this.dgvParts.Name = "dgvParts";
             this.dgvParts.RowHeadersWidth = 51;
             this.dgvParts.RowTemplate.Height = 25;
-            this.dgvParts.Size = new System.Drawing.Size(546, 152);
+            this.dgvParts.Size = new System.Drawing.Size(478, 114);
             this.dgvParts.TabIndex = 23;
             // 
             // ColName
@@ -221,10 +224,9 @@ namespace Elevators_Tilin.View
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Elevators_Tilin.Properties.Resources.imgReparacion;
-            this.pictureBox1.Location = new System.Drawing.Point(671, 229);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(587, 172);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 257);
+            this.pictureBox1.Size = new System.Drawing.Size(217, 193);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
@@ -232,9 +234,10 @@ namespace Elevators_Tilin.View
             // txtQuantity
             // 
             this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQuantity.Location = new System.Drawing.Point(259, 401);
+            this.txtQuantity.Location = new System.Drawing.Point(227, 301);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(133, 27);
+            this.txtQuantity.Size = new System.Drawing.Size(106, 23);
             this.txtQuantity.TabIndex = 25;
             // 
             // label1
@@ -242,9 +245,9 @@ namespace Elevators_Tilin.View
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(163, 401);
+            this.label1.Location = new System.Drawing.Point(143, 301);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 22);
+            this.label1.Size = new System.Drawing.Size(70, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "Cantidad:";
             // 
@@ -254,9 +257,10 @@ namespace Elevators_Tilin.View
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(443, 388);
+            this.btnAdd.Location = new System.Drawing.Point(372, 291);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(50, 50);
+            this.btnAdd.Size = new System.Drawing.Size(44, 38);
             this.btnAdd.TabIndex = 26;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -265,31 +269,31 @@ namespace Elevators_Tilin.View
             // 
             this.label5004.AutoSize = true;
             this.label5004.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5004.Location = new System.Drawing.Point(89, 50);
+            this.label5004.Location = new System.Drawing.Point(78, 38);
             this.label5004.Name = "label5004";
-            this.label5004.Size = new System.Drawing.Size(142, 22);
+            this.label5004.Size = new System.Drawing.Size(106, 17);
             this.label5004.TabIndex = 13;
             this.label5004.Text = "Tipo de equipo:";
             // 
             // cmbType
             // 
             this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Items.AddRange(new object[] {
             "Elevador",
             "Vehículo"});
-            this.cmbType.Location = new System.Drawing.Point(259, 47);
+            this.cmbType.Location = new System.Drawing.Point(227, 35);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(121, 28);
+            this.cmbType.Size = new System.Drawing.Size(106, 23);
             this.cmbType.TabIndex = 20;
             // 
             // FrmRepair
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(950, 632);
+            this.ClientSize = new System.Drawing.Size(831, 474);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.pictureBox1);
@@ -310,6 +314,7 @@ namespace Elevators_Tilin.View
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lbl5);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmRepair";
             this.Text = "FrmRepair";
             this.Load += new System.EventHandler(this.FrmRepair_Load);

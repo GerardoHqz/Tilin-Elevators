@@ -68,8 +68,6 @@ namespace Elevators_Tilin.View
                 string name = txtName.Text;
                 string state = cmbState.Text;
                 DateTime date = dtpMaintain.Value;
-                int id_equipo = 0;
-                int id_automovil = 0;
 
                 using (var db = new SIAL_DBContext())
                 {
