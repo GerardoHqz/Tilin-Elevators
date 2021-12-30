@@ -77,9 +77,16 @@ namespace Elevators_Tilin.View
             {
                 //obtenieniendo el id
                 List<Repuesto> repuesto = db.Repuestos.ToList();
+                List<Repuesto> valid = repuesto.Where(r => r.Nombre == txtNameSpareParts.Text).ToList();
                 
-                foreach (var item in repuesto)
+                if (valid.Count > 0)
                 {
+                    MessageBox.Show("El repuesto ya existe", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+
                     //agregando el registro de mantenimiento
                         Repuesto unRepuesto = new Repuesto
                         {
@@ -94,7 +101,7 @@ namespace Elevators_Tilin.View
                         
                         db.Add(unRepuesto);
                         db.SaveChanges();
-                        MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Repuesto agregado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);    
                 }
             }
         }
@@ -108,6 +115,7 @@ namespace Elevators_Tilin.View
             txtDescriptionInventory.Text = "";
             txtManufacturer.Text = "";
             txtSupply.Text = "";
+            txtModel.Text = "";
         }
     }
 }

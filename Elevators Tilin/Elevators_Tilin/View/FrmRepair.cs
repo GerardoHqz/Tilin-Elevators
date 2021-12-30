@@ -152,7 +152,7 @@ namespace Elevators_Tilin.View
                 
                 //aQUI FALLA
                 List<Repuesto> repuestos = db.Repuestos.ToList();
-                for (int i = 0; i < dgvParts.Rows.Count; i++)
+                for (int i = 1; i < dgvParts.Rows.Count; i++)
                 {
                     int idRepuesto = 0;
                     foreach (var item in repuestos)
@@ -173,7 +173,7 @@ namespace Elevators_Tilin.View
                     db.SaveChanges();
                 }
 
-                for(int i=0; i < dgvParts.Rows.Count; i++){
+                for(int i=1; i < dgvParts.Rows.Count; i++){
                     foreach(var item in repuestos){
                         if(item.Nombre == dgvParts.Rows[i].Cells[0].Value.ToString()){
                             int auxCant = Convert.ToInt32(dgvParts.Rows[i].Cells[2].Value.ToString());
