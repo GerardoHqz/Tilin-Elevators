@@ -16,5 +16,9 @@ namespace Elevators_Tilin.View
         {
             InitializeComponent();
         }
+        public void ExportarDatos(DataGridView datalistado)
+        {
+        
+        }
     }
 }

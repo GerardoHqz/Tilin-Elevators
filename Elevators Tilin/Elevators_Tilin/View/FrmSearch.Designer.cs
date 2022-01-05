@@ -29,47 +29,50 @@ namespace Elevators_Tilin.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvInformation = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNameUpdate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbUpdateName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cmbName = new System.Windows.Forms.ComboBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantitiy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtName
+            // btnSearch
             // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(308, 180);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(381, 27);
-            this.txtName.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Azure;
-            this.btnClose.BackgroundImage = global::Elevators_Tilin.Properties.Resources.search31;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(695, 180);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(39, 31);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.Azure;
+            this.btnSearch.BackgroundImage = global::Elevators_Tilin.Properties.Resources.search31;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(695, 180);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(39, 31);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvInformation
             // 
             this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Name,
+            this.Quantitiy,
+            this.Model,
+            this.Producer});
             this.dgvInformation.Location = new System.Drawing.Point(58, 244);
             this.dgvInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvInformation.Name = "dgvInformation";
@@ -88,15 +91,6 @@ namespace Elevators_Tilin.View
             this.label1.TabIndex = 4;
             this.label1.Text = "Repuestos:";
             // 
-            // txtNameUpdate
-            // 
-            this.txtNameUpdate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNameUpdate.Location = new System.Drawing.Point(105, 26);
-            this.txtNameUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNameUpdate.Name = "txtNameUpdate";
-            this.txtNameUpdate.Size = new System.Drawing.Size(141, 27);
-            this.txtNameUpdate.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -110,7 +104,7 @@ namespace Elevators_Tilin.View
             // txtQuantity
             // 
             this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQuantity.Location = new System.Drawing.Point(347, 27);
+            this.txtQuantity.Location = new System.Drawing.Point(447, 27);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(141, 27);
@@ -120,7 +114,7 @@ namespace Elevators_Tilin.View
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(261, 29);
+            this.label3.Location = new System.Drawing.Point(361, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 24);
             this.label3.TabIndex = 4;
@@ -129,34 +123,86 @@ namespace Elevators_Tilin.View
             // btnUpdate
             // 
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(538, 27);
+            this.btnUpdate.Location = new System.Drawing.Point(618, 27);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(94, 29);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.cmbUpdateName);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtQuantity);
-            this.panel1.Controls.Add(this.txtNameUpdate);
-            this.panel1.Location = new System.Drawing.Point(141, 63);
+            this.panel1.Location = new System.Drawing.Point(106, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(665, 75);
+            this.panel1.Size = new System.Drawing.Size(748, 75);
             this.panel1.TabIndex = 6;
+            // 
+            // cmbUpdateName
+            // 
+            this.cmbUpdateName.FormattingEnabled = true;
+            this.cmbUpdateName.Location = new System.Drawing.Point(104, 26);
+            this.cmbUpdateName.Name = "cmbUpdateName";
+            this.cmbUpdateName.Size = new System.Drawing.Size(231, 28);
+            this.cmbUpdateName.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(141, 40);
+            this.label4.Location = new System.Drawing.Point(106, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Actualizar un repuesto";
+            // 
+            // cmbName
+            // 
+            this.cmbName.FormattingEnabled = true;
+            this.cmbName.Location = new System.Drawing.Point(308, 179);
+            this.cmbName.Name = "cmbName";
+            this.cmbName.Size = new System.Drawing.Size(367, 28);
+            this.cmbName.TabIndex = 8;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 125;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Nombre";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.Width = 125;
+            // 
+            // Quantitiy
+            // 
+            this.Quantitiy.HeaderText = "Cantidad";
+            this.Quantitiy.MinimumWidth = 6;
+            this.Quantitiy.Name = "Quantitiy";
+            this.Quantitiy.Width = 125;
+            // 
+            // Model
+            // 
+            this.Model.HeaderText = "Modelo";
+            this.Model.MinimumWidth = 6;
+            this.Model.Name = "Model";
+            this.Model.Width = 125;
+            // 
+            // Producer
+            // 
+            this.Producer.HeaderText = "Fabricante";
+            this.Producer.MinimumWidth = 6;
+            this.Producer.Name = "Producer";
+            this.Producer.Width = 125;
             // 
             // FrmSearch
             // 
@@ -164,14 +210,13 @@ namespace Elevators_Tilin.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 632);
+            this.Controls.Add(this.cmbName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvInformation);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.btnSearch);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmSearch";
             this.Text = "FrmSearch";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -183,7 +228,7 @@ namespace Elevators_Tilin.View
 
         #endregion
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvInformation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNameUpdate;
@@ -193,5 +238,12 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbUpdateName;
+        private System.Windows.Forms.ComboBox cmbName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantitiy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Model;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producer;
     }
 }

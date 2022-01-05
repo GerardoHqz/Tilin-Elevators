@@ -22,6 +22,7 @@ namespace Elevators_Tilin.View
         {
             LoadTheme();
             ChargerProducts();
+            cmbParts.Text = "";
         }
 
         //Para cambiar los botones del color correspondiente
@@ -78,11 +79,14 @@ namespace Elevators_Tilin.View
             List<Reparacion> reparaciones = db.Reparacions.ToList();
             List<Equipo> equipos = db.Equipos.ToList();
             List<Equipo> exist = equipos.Where(u => u.NumeroSerie == txtEquipNumber.Text).ToList();
+            List<Automovil> auto = db.Automovils.ToList();
+            List<Automovil> exist2 = auto.Where(u => u.Placa == txtEquipNumber.Text).ToList();
+
             bool verification = txtEquipNumber.Text.Length > 1 && cmbState.Text.Length > 1 && txtName.Text.Length > 1;
             bool band = true;
             bool band2 = true;
 
-            if(verification && exist.Count() > 0) {
+            if(verification && (exist.Count() > 0 || exist2.Count() > 0)) {
                 
                 if(cmbType.Text == "Elevador"){
                     int id = 0;
@@ -113,14 +117,14 @@ namespace Elevators_Tilin.View
                 }
                 else{
                     int id = 0;
-                    foreach (var item in equipos)
+                    foreach (var item in auto)
                     {
-                        if (item.NumeroSerie == txtEquipNumber.Text)
+                        if (item.Placa == txtEquipNumber.Text)
                         {
                             id = item.Id;
                         }
                         else{
-                            band2 = false;
+                            band2=false;
                         }
                     }
 
@@ -152,7 +156,7 @@ namespace Elevators_Tilin.View
                 
                 //aQUI FALLA
                 List<Repuesto> repuestos = db.Repuestos.ToList();
-                for (int i = 1; i < dgvParts.Rows.Count; i++)
+                for (int i = 0; i < dgvParts.Rows.Count -1; i++)
                 {
                     int idRepuesto = 0;
                     foreach (var item in repuestos)
@@ -161,6 +165,11 @@ namespace Elevators_Tilin.View
                         if (item.Nombre == name)
                         {
                             idRepuesto = item.Id;
+                        }
+                        if(item.Id == idRepuesto){
+                            item.Cantidad = item.Cantidad - Convert.ToInt32(dgvParts.Rows[i].Cells[1].Value);
+                            db.Update(item);
+                            db.SaveChanges();
                         }
                     }
                     //Añadiendo el registro repuesto
@@ -173,19 +182,11 @@ namespace Elevators_Tilin.View
                     db.SaveChanges();
                 }
 
-                for(int i=1; i < dgvParts.Rows.Count; i++){
-                    foreach(var item in repuestos){
-                        if(item.Nombre == dgvParts.Rows[i].Cells[0].Value.ToString()){
-                            int auxCant = Convert.ToInt32(dgvParts.Rows[i].Cells[2].Value.ToString());
-                            item.Cantidad -=  auxCant;
-                            db.Update(item);
-                            db.SaveChanges();
-                        }
-                    }
-                }
+                MessageBox.Show("Reparacion registrada correctamente!", "SIAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else{
-                MessageBox.Show("Algo anda mal weon", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Numero de placa/serie incorrecto o datos erroneos!", "SIAL", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // if(band == false || band2 == false){

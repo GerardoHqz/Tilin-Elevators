@@ -169,7 +169,6 @@ C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_T
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.csproj.AssemblyReference.cache
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.Properties.Resources.resources
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmHome.resources
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmInventory.resources
@@ -189,3 +188,5 @@ C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_T
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\ref\Elevators_Tilin.dll
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.pdb
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.genruntimeconfig.cache
+C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.csproj.ResolveComReference.cache
