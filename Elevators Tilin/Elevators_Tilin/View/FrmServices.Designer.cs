@@ -31,8 +31,8 @@
             this.dgvInformation = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.cmbType = new System.Windows.Forms.ComboBox();
             this.btnExcel = new System.Windows.Forms.Button();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,19 +70,6 @@
             this.txtName.Size = new System.Drawing.Size(381, 27);
             this.txtName.TabIndex = 5;
             // 
-            // cmbType
-            // 
-            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Items.AddRange(new object[] {
-            "Elevador",
-            "Vehículo"});
-            this.cmbType.Location = new System.Drawing.Point(129, 84);
-            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(134, 28);
-            this.cmbType.TabIndex = 4;
-            // 
             // btnExcel
             // 
             this.btnExcel.BackgroundImage = global::Elevators_Tilin.Properties.Resources.excel;
@@ -94,6 +81,19 @@
             this.btnExcel.Size = new System.Drawing.Size(66, 49);
             this.btnExcel.TabIndex = 8;
             this.btnExcel.UseVisualStyleBackColor = true;
+            // 
+            // cmbType
+            // 
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
+            "Reparaciones",
+            "Mantenimiento"});
+            this.cmbType.Location = new System.Drawing.Point(129, 84);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(134, 28);
+            this.cmbType.TabIndex = 4;
             // 
             // FrmServices
             // 
@@ -119,7 +119,7 @@
         private System.Windows.Forms.DataGridView dgvInformation;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.ComboBox cmbType;
     }
 }

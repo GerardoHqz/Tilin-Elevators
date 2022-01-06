@@ -47,7 +47,7 @@ namespace Validar_TextBox
             else
             {
                 v.Handled = true;
-                MessageBox.Show("Solo Numeros");
+                MessageBox.Show("Por favor ingrese un numero!");
             }
         }
 
@@ -72,7 +72,7 @@ namespace Validar_TextBox
             else
             {
                 v.Handled = true;
-                MessageBox.Show("Solo numeros o numeros con punto decimal");
+                MessageBox.Show("Por favor ingrese numeros o numeros decimales!");
             }
         }
     }

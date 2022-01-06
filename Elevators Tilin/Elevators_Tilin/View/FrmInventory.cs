@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Validar_TextBox;
 
 namespace Elevators_Tilin.View
 {
@@ -116,6 +117,11 @@ namespace Elevators_Tilin.View
             txtManufacturer.Text = "";
             txtSupply.Text = "";
             txtModel.Text = "";
+        }
+
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
         }
     }
 }

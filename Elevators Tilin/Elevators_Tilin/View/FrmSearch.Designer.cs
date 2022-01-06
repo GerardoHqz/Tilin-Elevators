@@ -39,7 +39,7 @@ namespace Elevators_Tilin.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbUpdateName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbName = new System.Windows.Forms.ComboBox();
+            this.cmbName = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantitiy = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,11 +55,10 @@ namespace Elevators_Tilin.View
             this.btnSearch.BackgroundImage = global::Elevators_Tilin.Properties.Resources.search31;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(695, 180);
+            this.btnSearch.Location = new System.Drawing.Point(683, 179);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(39, 31);
+            this.btnSearch.Size = new System.Drawing.Size(39, 37);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -109,6 +108,7 @@ namespace Elevators_Tilin.View
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(141, 27);
             this.txtQuantity.TabIndex = 1;
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // label3
             // 
@@ -147,10 +147,11 @@ namespace Elevators_Tilin.View
             // cmbUpdateName
             // 
             this.cmbUpdateName.FormattingEnabled = true;
-            this.cmbUpdateName.Location = new System.Drawing.Point(104, 26);
+            this.cmbUpdateName.Location = new System.Drawing.Point(96, 25);
+            this.cmbUpdateName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbUpdateName.Name = "cmbUpdateName";
-            this.cmbUpdateName.Size = new System.Drawing.Size(231, 28);
-            this.cmbUpdateName.TabIndex = 6;
+            this.cmbUpdateName.Size = new System.Drawing.Size(259, 28);
+            this.cmbUpdateName.TabIndex = 23;
             // 
             // label4
             // 
@@ -163,25 +164,25 @@ namespace Elevators_Tilin.View
             // 
             // cmbName
             // 
-            this.cmbName.FormattingEnabled = true;
-            this.cmbName.Location = new System.Drawing.Point(308, 179);
+            this.cmbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cmbName.Location = new System.Drawing.Point(309, 183);
             this.cmbName.Name = "cmbName";
-            this.cmbName.Size = new System.Drawing.Size(367, 28);
+            this.cmbName.Size = new System.Drawing.Size(355, 27);
             this.cmbName.TabIndex = 8;
             // 
             // ID
             // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
-            this.ID.Width = 125;
             // 
             // Name
             // 
             this.Name.HeaderText = "Nombre";
             this.Name.MinimumWidth = 6;
             this.Name.Name = "Name";
-            this.Name.Width = 125;
+            this.Name.Width = 175;
             // 
             // Quantitiy
             // 
@@ -195,14 +196,14 @@ namespace Elevators_Tilin.View
             this.Model.HeaderText = "Modelo";
             this.Model.MinimumWidth = 6;
             this.Model.Name = "Model";
-            this.Model.Width = 125;
+            this.Model.Width = 175;
             // 
             // Producer
             // 
             this.Producer.HeaderText = "Fabricante";
             this.Producer.MinimumWidth = 6;
             this.Producer.Name = "Producer";
-            this.Producer.Width = 125;
+            this.Producer.Width = 281;
             // 
             // FrmSearch
             // 
@@ -218,6 +219,7 @@ namespace Elevators_Tilin.View
             this.Controls.Add(this.btnSearch);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Text = "FrmSearch";
+            this.Load += new System.EventHandler(this.FrmSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -239,7 +241,7 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbUpdateName;
-        private System.Windows.Forms.ComboBox cmbName;
+        private System.Windows.Forms.TextBox cmbName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantitiy;

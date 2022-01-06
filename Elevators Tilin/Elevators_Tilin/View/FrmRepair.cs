@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Validar_TextBox;
 
 namespace Elevators_Tilin.View
 {
@@ -25,7 +26,7 @@ namespace Elevators_Tilin.View
             cmbParts.Text = "";
         }
 
-        //Para cambiar los botones del color correspondiente
+        //Para cambiar los botones del color correspondiente ඞඞඞ ඞ
         private void LoadTheme()
         {
             foreach (Control btns in this.Controls)
@@ -220,6 +221,9 @@ namespace Elevators_Tilin.View
             Clear();
         }
 
-        
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
     }
 }

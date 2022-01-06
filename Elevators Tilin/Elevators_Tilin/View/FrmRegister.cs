@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Validar_TextBox;
 
 namespace Elevators_Tilin.View
 {
@@ -97,6 +98,21 @@ namespace Elevators_Tilin.View
             txtBrand.Text = "";
             dtpStartcontract.Value=DateTime.Now;
             dtpFinishcontract.Value=DateTime.Now;
+        }
+
+        private void txtSpeed_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.NumerosDecimales(e);
+        }
+
+        private void txtLevels_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void txtVoltage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.NumerosDecimales(e);
         }
     }
 }

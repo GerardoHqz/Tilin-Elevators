@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Validar_TextBox;
 
 namespace Elevators_Tilin.View
 {
@@ -22,9 +23,7 @@ namespace Elevators_Tilin.View
         {
             LoadTheme();
             ChargerProducts();
-            var db = new SIAL_DBContext();
-            List<Repuesto> repuestos = db.Repuestos.ToList();
-            ConfigurationTable(repuestos);
+            cmbUpdateName.Text = "";
         }   
 
         private void LoadTheme()
@@ -45,13 +44,19 @@ namespace Elevators_Tilin.View
             var db = new SIAL_DBContext();
             List<Repuesto> repuestos = db.Repuestos.ToList();
             //Cargando datos al cmb
-            cmbName.DataSource = repuestos;
-            cmbName.DisplayMember = "Nombre";
-            cmbName.ValueMember = "Id";
-
             cmbUpdateName.DataSource = repuestos;
             cmbUpdateName.DisplayMember = "Nombre";
             cmbUpdateName.ValueMember = "Id";
+
+            var collection = new AutoCompleteStringCollection();
+            foreach(var element in repuestos){
+                collection.Add(element.Nombre);
+            }
+
+            cmbUpdateName.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmbUpdateName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cmbUpdateName.AutoCompleteCustomSource = collection;
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -62,8 +67,10 @@ namespace Elevators_Tilin.View
 
         private void Update()
         {
-            int amount = Convert.ToInt32(txtQuantity.Text);
+            if (txtQuantity.Text != "")
             {
+                int amount = Convert.ToInt32(txtQuantity.Text);
+            
                 var db = new SIAL_DBContext();
                 List<Repuesto> repuestos = db.Repuestos.ToList();
                 List<Repuesto> exist = repuestos.Where(x => x.Nombre == cmbUpdateName.Text).ToList();
@@ -80,7 +87,13 @@ namespace Elevators_Tilin.View
                 {
                     MessageBox.Show("Ha ocurrido un error");
                 }
+            
             }
+            else
+            {
+                MessageBox.Show("Ingrese una cantidad");
+            }
+            
             
         }
 
@@ -106,7 +119,7 @@ namespace Elevators_Tilin.View
             using (var db = new SIAL_DBContext())
             {
                 List<Repuesto> auxRepuesto = db.Repuestos.ToList();
-                List<Repuesto> part = auxRepuesto.Where(x => x.Nombre.Contains(cmbName.Text)).ToList();
+                List<Repuesto> part = auxRepuesto.Where(x => (x.Nombre.ToLower().Contains(cmbName.Text.ToLower()))).ToList();
                 ConfigurationTable(part);
             }
         }
@@ -119,6 +132,11 @@ namespace Elevators_Tilin.View
         private void Clear(){
             txtQuantity.Text = "";
             cmbUpdateName.Text = "";
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
         }
     }
 }
