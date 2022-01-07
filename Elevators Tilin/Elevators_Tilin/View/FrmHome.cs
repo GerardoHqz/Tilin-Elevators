@@ -159,5 +159,13 @@ namespace Elevators_Tilin.View
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
+
+        private void btnEquipments_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmElevatorsList(), sender);
+            lblTitle.Text = "Equipos";
+            lblTitle.Location = new Point(300, 12);
+            this.Show();
+        }
     }
 }

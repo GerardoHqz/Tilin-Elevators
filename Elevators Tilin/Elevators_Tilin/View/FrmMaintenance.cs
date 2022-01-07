@@ -79,69 +79,116 @@ namespace Elevators_Tilin.View
                     List<Equipo> equipos = db.Equipos.ToList();
                     List<Automovil> automoviles = db.Automovils.ToList();
                     List<Equipo> exist = equipos.Where(x => x.NumeroSerie == equipNumber).ToList();
+                    List<Automovil> exist2 = automoviles.Where(x => x.Placa == equipNumber).ToList();
 
                     
-                    foreach (var item in equipos)
-                    {
-                        if (item.NumeroSerie == equipNumber)
-                        {
+                    // foreach (var item in equipos)
+                    // {
+                    //     if (item.NumeroSerie == equipNumber)
+                    //     {
 
-                            //agregando el registro de mantenimiento
-                            Mantenimiento unMantenimiento = new Mantenimiento
-                            {
-                                FechaMantenimiento = date,
-                                NumeroSerie = equipNumber,
-                                Descripcion = description,
-                                Tecnico = name,
-                                Estado = state,
-                                IdEquipo = item.Id,
-                                IdAutomovil = null
-                            };
-                            db.Add(unMantenimiento);
-                            db.SaveChanges();
-                            MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //         //agregando el registro de mantenimiento
+                    //         Mantenimiento unMantenimiento = new Mantenimiento
+                    //         {
+                    //             FechaMantenimiento = date,
+                    //             NumeroSerie = equipNumber,
+                    //             Descripcion = description,
+                    //             Tecnico = name,
+                    //             Estado = state,
+                    //             IdEquipo = item.Id,
+                    //             IdAutomovil = null
+                    //         };
+                    //         db.Add(unMantenimiento);
+                    //         db.SaveChanges();
+                    //         MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        }
-                        else { verify = false; }
-                    }
+                    //     }
+                    //     else { verify = false; }
+                    // }
 
-                    foreach (var item in automoviles)
-                    {
-                        if (item.Placa == equipNumber)
-                        {
-                            //agregando el registro de mantenimiento
-                            Mantenimiento unMantenimiento = new Mantenimiento
-                            {
-                                FechaMantenimiento = date,
-                                NumeroSerie = equipNumber,
-                                Descripcion = description,
-                                Tecnico = name,
-                                Estado = state,
-                                IdEquipo = null,
-                                IdAutomovil = item.Id
-                            };
-                            db.Add(unMantenimiento);
-                            db.SaveChanges();
-                            MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // foreach (var item in automoviles)
+                    // {
+                    //     if (item.Placa == equipNumber)
+                    //     {
+                    //         //agregando el registro de mantenimiento
+                    //         Mantenimiento unMantenimiento = new Mantenimiento
+                    //         {
+                    //             FechaMantenimiento = date,
+                    //             NumeroSerie = equipNumber,
+                    //             Descripcion = description,
+                    //             Tecnico = name,
+                    //             Estado = state,
+                    //             IdEquipo = null,
+                    //             IdAutomovil = item.Id
+                    //         };
+                    //         db.Add(unMantenimiento);
+                    //         db.SaveChanges();
+                    //         MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        }
-                        else { verify2 = false; }
+                    //     }
+                    //     else { verify2 = false; }
 
-                    }
-
-
-                    if (!verify && !verify2)
-                    {
-                    MessageBox.Show("El numero de serie no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    // }
 
 
-                }
+                    // if (!verify && !verify2)
+                    // {
+                    // MessageBox.Show("El numero de serie no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // }
+
+
                 
-                //Si pasa error entonces ocupamos dos if validando si es equipo o automovil
-            }   
+                
+                    //Si pasa error entonces ocupamos dos if validando si es equipo o automovil
+                if(exist.Count() > 0 )
+                {
+                    foreach(var item in equipos){
+                        if(item.NumeroSerie == txtEquipNumber.Text){
+                            Mantenimiento unMantenimiento = new Mantenimiento
+                                {
+                                    FechaMantenimiento = date,
+                                    NumeroSerie = equipNumber,
+                                    Descripcion = description,
+                                    Tecnico = name,
+                                    Estado = state,
+                                    IdEquipo = item.Id,
+                                    IdAutomovil = null
+                                };
+                            db.Add(unMantenimiento);
+                            db.SaveChanges();
+                            MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else if(exist2.Count() > 0)
+                {
+                    foreach(var item in automoviles)
+                    {
+                        if(item.Placa == txtEquipNumber.Text)
+                        {
+                            Mantenimiento unMantenimiento = new Mantenimiento
+                                {
+                                    FechaMantenimiento = date,
+                                    NumeroSerie = equipNumber,
+                                    Descripcion = description,
+                                    Tecnico = name,
+                                    Estado = state,
+                                    IdEquipo = null,
+                                    IdAutomovil = item.Id
+                                };
+                            db.Add(unMantenimiento);
+                            db.SaveChanges();
+                            MessageBox.Show("Mantenimiento registrado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El numero de serie no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }   
 
-            
         private void Clear()
         {
             txtEquipNumber.Text = "";
@@ -150,5 +197,5 @@ namespace Elevators_Tilin.View
             cmbState.Text = "";
             dtpMaintain.Value = DateTime.Now;
         }
-    }  
-}
+    }
+}  

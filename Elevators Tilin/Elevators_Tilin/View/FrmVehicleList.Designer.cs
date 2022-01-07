@@ -1,6 +1,6 @@
 ﻿namespace Elevators_Tilin.View
 {
-    partial class FrmServices
+    partial class FrmVehicleList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvInformation = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnExcel = new System.Windows.Forms.Button();
-            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.dgvInformation = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreTecnico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(206, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "No. Placa:";
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackgroundImage = global::Elevators_Tilin.Properties.Resources.excel;
+            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Location = new System.Drawing.Point(798, 73);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(66, 49);
+            this.btnExcel.TabIndex = 14;
+            this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // dgvInformation
             // 
@@ -53,63 +73,13 @@
             this.NombreTecnico,
             this.Fecha,
             this.Descripcion});
-            this.dgvInformation.Location = new System.Drawing.Point(48, 168);
+            this.dgvInformation.Location = new System.Drawing.Point(46, 165);
             this.dgvInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvInformation.Name = "dgvInformation";
             this.dgvInformation.RowHeadersWidth = 51;
             this.dgvInformation.RowTemplate.Height = 25;
             this.dgvInformation.Size = new System.Drawing.Size(858, 409);
-            this.dgvInformation.TabIndex = 7;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Azure;
-            this.btnSearch.BackgroundImage = global::Elevators_Tilin.Properties.Resources.search3;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(672, 84);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(38, 32);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(285, 86);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(381, 27);
-            this.txtName.TabIndex = 5;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.BackgroundImage = global::Elevators_Tilin.Properties.Resources.excel;
-            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExcel.FlatAppearance.BorderSize = 0;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Location = new System.Drawing.Point(800, 76);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(66, 49);
-            this.btnExcel.TabIndex = 8;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Click += new System.EventHandler(this.BtnExcel_Click);
-            // 
-            // cmbType
-            // 
-            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Items.AddRange(new object[] {
-            "Reparaciones",
-            "Mantenimiento"});
-            this.cmbType.Location = new System.Drawing.Point(129, 84);
-            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(134, 28);
-            this.cmbType.TabIndex = 4;
+            this.dgvInformation.TabIndex = 13;
             // 
             // ID
             // 
@@ -160,29 +130,41 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Width = 450;
             // 
-            // label1
+            // btnSearch
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(285, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "No. Placa/Serie";
+            this.btnSearch.BackColor = System.Drawing.Color.Azure;
+            this.btnSearch.BackgroundImage = global::Elevators_Tilin.Properties.Resources.search3;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(670, 81);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(38, 32);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // FrmServices
+            // txtName
+            // 
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Location = new System.Drawing.Point(283, 83);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(381, 27);
+            this.txtName.TabIndex = 11;
+            // 
+            // FrmVehicleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 632);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.dgvInformation);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.cmbType);
-            this.Name = "FrmServices";
-            this.Text = "FrmServices";
+            this.Name = "FrmVehicleList";
+            this.Text = "FrmVehicleList";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,23 +173,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvInformation;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExcel;
-        private System.Windows.Forms.ComboBox cmbType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridView dgvInformation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumIdentificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroIdentificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreTecnico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtName;
     }
 }

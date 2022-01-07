@@ -31,6 +31,7 @@ namespace Elevators_Tilin.View
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.pnlMainMenu = new System.Windows.Forms.Panel();
+            this.btnEquipments = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@ namespace Elevators_Tilin.View
             // pnlMainMenu
             // 
             this.pnlMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.pnlMainMenu.Controls.Add(this.btnEquipments);
             this.pnlMainMenu.Controls.Add(this.btnServices);
             this.pnlMainMenu.Controls.Add(this.button2);
             this.pnlMainMenu.Controls.Add(this.button3);
@@ -73,6 +75,27 @@ namespace Elevators_Tilin.View
             this.pnlMainMenu.Size = new System.Drawing.Size(248, 791);
             this.pnlMainMenu.TabIndex = 0;
             // 
+            // btnEquipments
+            // 
+            this.btnEquipments.BackColor = System.Drawing.Color.Transparent;
+            this.btnEquipments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEquipments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEquipments.FlatAppearance.BorderSize = 0;
+            this.btnEquipments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipments.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEquipments.ForeColor = System.Drawing.Color.White;
+            this.btnEquipments.Image = global::Elevators_Tilin.Properties.Resources.lupa4;
+            this.btnEquipments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEquipments.Location = new System.Drawing.Point(0, 628);
+            this.btnEquipments.Name = "btnEquipments";
+            this.btnEquipments.Size = new System.Drawing.Size(248, 71);
+            this.btnEquipments.TabIndex = 18;
+            this.btnEquipments.Text = "Equipos";
+            this.btnEquipments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEquipments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEquipments.UseVisualStyleBackColor = false;
+            this.btnEquipments.Click += new System.EventHandler(this.btnEquipments_Click);
+            // 
             // btnServices
             // 
             this.btnServices.BackColor = System.Drawing.Color.Transparent;
@@ -84,9 +107,9 @@ namespace Elevators_Tilin.View
             this.btnServices.ForeColor = System.Drawing.Color.White;
             this.btnServices.Image = global::Elevators_Tilin.Properties.Resources.icoSearch;
             this.btnServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServices.Location = new System.Drawing.Point(0, 607);
+            this.btnServices.Location = new System.Drawing.Point(0, 556);
             this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(248, 83);
+            this.btnServices.Size = new System.Drawing.Size(248, 72);
             this.btnServices.TabIndex = 17;
             this.btnServices.Text = "Servicios";
             this.btnServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,9 +128,9 @@ namespace Elevators_Tilin.View
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Elevators_Tilin.Properties.Resources.bucanding;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 524);
+            this.button2.Location = new System.Drawing.Point(0, 479);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(248, 83);
+            this.button2.Size = new System.Drawing.Size(248, 77);
             this.button2.TabIndex = 16;
             this.button2.Text = "Inventario";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,9 +149,9 @@ namespace Elevators_Tilin.View
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Elevators_Tilin.Properties.Resources.IcoInventario__1_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 441);
+            this.button3.Location = new System.Drawing.Point(0, 402);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(248, 83);
+            this.button3.Size = new System.Drawing.Size(248, 77);
             this.button3.TabIndex = 15;
             this.button3.Text = "Repuestos";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,9 +170,9 @@ namespace Elevators_Tilin.View
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Elevators_Tilin.Properties.Resources.IcoRepairpng__1_;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 358);
+            this.button4.Location = new System.Drawing.Point(0, 325);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(248, 83);
+            this.button4.Size = new System.Drawing.Size(248, 77);
             this.button4.TabIndex = 14;
             this.button4.Text = "Reparaciones";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,9 +191,9 @@ namespace Elevators_Tilin.View
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Elevators_Tilin.Properties.Resources.IcoMantenimiento__1_;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 275);
+            this.button5.Location = new System.Drawing.Point(0, 256);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(248, 83);
+            this.button5.Size = new System.Drawing.Size(248, 69);
             this.button5.TabIndex = 13;
             this.button5.Text = "Mantenimientos     ";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,9 +212,9 @@ namespace Elevators_Tilin.View
             this.btnVehicle.ForeColor = System.Drawing.Color.White;
             this.btnVehicle.Image = global::Elevators_Tilin.Properties.Resources.vehicleico;
             this.btnVehicle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehicle.Location = new System.Drawing.Point(0, 192);
+            this.btnVehicle.Location = new System.Drawing.Point(0, 186);
             this.btnVehicle.Name = "btnVehicle";
-            this.btnVehicle.Size = new System.Drawing.Size(248, 83);
+            this.btnVehicle.Size = new System.Drawing.Size(248, 70);
             this.btnVehicle.TabIndex = 8;
             this.btnVehicle.Text = "Vehículo   ";
             this.btnVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +245,7 @@ namespace Elevators_Tilin.View
             this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegister.Location = new System.Drawing.Point(0, 109);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(248, 83);
+            this.btnRegister.Size = new System.Drawing.Size(248, 77);
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "Elevador";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -283,9 +306,9 @@ namespace Elevators_Tilin.View
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Location = new System.Drawing.Point(417, 16);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(180, 67);
+            this.lblTitle.Size = new System.Drawing.Size(274, 67);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "HOME";
+            this.lblTitle.Text = "WELCOME";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlPrincipal
@@ -352,5 +375,6 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnVehicle;
         private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.Button btnEquipments;
     }
 }

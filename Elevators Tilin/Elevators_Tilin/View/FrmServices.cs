@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elevators_Tilin.ContextSIAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,7 +52,65 @@ namespace Elevators_Tilin.View
             
             ExportarDatos(dgvInformation);
         }
+        
+        //Para Mantenimientos
+        private void ConfigurationTable(List<Mantenimiento> auxMaintenance)
+        {
+            //limpiando tabla
+            dgvInformation.Rows.Clear();
 
-        //
+            //Agregando informacion
+            foreach(var element in auxMaintenance)
+            {
+                dgvInformation.Rows.Add(
+                        element.Id,
+                        element.NumeroSerie,
+                        element.Estado,
+                        element.Tecnico,
+                        element.FechaMantenimiento,
+                        element.Descripcion
+                    );
+            }
+        }
+
+        //Para Reparaciones
+        private void ConfigurationTable2(List<Reparacion> auxRepair)
+        {
+            //limpiando tabla
+            dgvInformation.Rows.Clear();
+
+            //Agregando informacion
+            foreach(var element in auxRepair)
+            {
+                dgvInformation.Rows.Add(
+                        element.Id,
+                        element.NumeroSerie,
+                        element.Estado,
+                        element.Tecnico,
+                        element.FechaReparacion,
+                        element.Descripcion
+                    );
+            }
+        }
+        private void ViewInformation(){
+            var db = new SIAL_DBContext();
+            if(cmbType.Text == "Reparaciones")
+            {
+                List<Reparacion> Repair = db.Reparacions.ToList();
+                List<Reparacion> auxRepair = Repair.Where(x => (x.NumeroSerie.ToLower().Contains(txtName.Text.ToLower()))).ToList();
+                ConfigurationTable2(Repair);
+            }
+            else
+            {
+                List<Mantenimiento> Maintenance = db.Mantenimientos.ToList();
+                List<Mantenimiento> auxMaintenance = Maintenance.Where(x => (x.NumeroSerie.ToLower().Contains(txtName.Text.ToLower()))).ToList();
+                ConfigurationTable(Maintenance);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            ViewInformation();
+        }
     }
 }

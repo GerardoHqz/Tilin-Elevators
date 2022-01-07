@@ -62,7 +62,7 @@ namespace Elevators_Tilin.View
             this.dtpMaintain.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpMaintain.Location = new System.Drawing.Point(282, 145);
             this.dtpMaintain.Name = "dtpMaintain";
-            this.dtpMaintain.Size = new System.Drawing.Size(121, 32);
+            this.dtpMaintain.Size = new System.Drawing.Size(123, 32);
             this.dtpMaintain.TabIndex = 14;
             // 
             // lbl4
@@ -96,9 +96,9 @@ namespace Elevators_Tilin.View
             this.lbl1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl1.Location = new System.Drawing.Point(49, 55);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(176, 22);
+            this.lbl1.Size = new System.Drawing.Size(165, 22);
             this.lbl1.TabIndex = 11;
-            this.lbl1.Text = "Numero del equipo:";
+            this.lbl1.Text = "N° de Serie/Placa:";
             // 
             // txtEquipNumber
             // 
