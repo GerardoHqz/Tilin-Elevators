@@ -51,6 +51,7 @@ namespace Elevators_Tilin.View
                 int  year = Convert.ToInt32(txtYear.Text);
                 string gas = cmbGas.Text;
 
+
                 using (var db= new SIAL_DBContext())
                 {
                     List<Automovil> vehicles = db.Automovils.ToList();
@@ -69,6 +70,8 @@ namespace Elevators_Tilin.View
                         Marca=brand,
                         Modelo=model,
                         Placa=plateVehicle,
+                        ContratoInicio= dtpStartcontract.Value,
+                        ContratoFinal= dtpFinishcontract.Value
                     };
                     db.Add(new_vehicle);
                     db.SaveChanges();

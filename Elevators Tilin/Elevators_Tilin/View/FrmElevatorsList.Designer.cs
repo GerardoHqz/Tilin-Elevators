@@ -30,16 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcel = new System.Windows.Forms.Button();
-            this.dgvInformation = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InicioContrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.cmbType = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,58 +52,12 @@
             this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExcel.FlatAppearance.BorderSize = 0;
             this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Location = new System.Drawing.Point(860, 165);
+            this.btnExcel.Location = new System.Drawing.Point(796, 71);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(66, 49);
             this.btnExcel.TabIndex = 20;
             this.btnExcel.UseVisualStyleBackColor = true;
-            // 
-            // dgvInformation
-            // 
-            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NumeroSerie,
-            this.Marca,
-            this.InicioContrato});
-            this.dgvInformation.Location = new System.Drawing.Point(46, 165);
-            this.dgvInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvInformation.Name = "dgvInformation";
-            this.dgvInformation.RowHeadersWidth = 51;
-            this.dgvInformation.RowTemplate.Height = 25;
-            this.dgvInformation.Size = new System.Drawing.Size(796, 181);
-            this.dgvInformation.TabIndex = 19;
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 160.4278F;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Width = 50;
-            // 
-            // NumeroSerie
-            // 
-            this.NumeroSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.NumeroSerie.FillWeight = 87.91444F;
-            this.NumeroSerie.HeaderText = "No. Identificación ";
-            this.NumeroSerie.MinimumWidth = 6;
-            this.NumeroSerie.Name = "NumeroSerie";
-            this.NumeroSerie.Width = 146;
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Marca";
-            this.Marca.MinimumWidth = 6;
-            this.Marca.Name = "Marca";
-            this.Marca.Width = 125;
-            // 
-            // InicioContrato
-            // 
-            this.InicioContrato.HeaderText = "InicioContrato";
-            this.InicioContrato.MinimumWidth = 6;
-            this.InicioContrato.Name = "InicioContrato";
-            this.InicioContrato.Width = 125;
+            this.btnExcel.Click += new System.EventHandler(this.BtnExcel_Click);
             // 
             // btnSearch
             // 
@@ -138,11 +86,11 @@
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(46, 400);
+            this.dgv.Location = new System.Drawing.Point(46, 136);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 29;
-            this.dgv.Size = new System.Drawing.Size(796, 188);
+            this.dgv.Size = new System.Drawing.Size(852, 445);
             this.dgv.TabIndex = 22;
             // 
             // cmbType
@@ -152,7 +100,7 @@
             this.cmbType.Items.AddRange(new object[] {
             "Elevador",
             "Vehículo"});
-            this.cmbType.Location = new System.Drawing.Point(111, 85);
+            this.cmbType.Location = new System.Drawing.Point(111, 81);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(127, 28);
             this.cmbType.TabIndex = 23;
@@ -161,17 +109,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 632);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExcel);
-            this.Controls.Add(this.dgvInformation);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtName);
             this.Name = "FrmElevatorsList";
             this.Text = "FrmElevatorsList";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

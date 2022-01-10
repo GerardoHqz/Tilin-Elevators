@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
+using objExcel = Microsoft.Office.Interop.Excel;
+
 
 namespace Elevators_Tilin.View
 {
@@ -18,40 +21,54 @@ namespace Elevators_Tilin.View
             InitializeComponent();
 
         }
-        public void ExportarDatos(DataGridView datalistado)
-        {
-            Microsoft.Office.Interop.Excel.Application exportarexcel = new Microsoft.Office.Interop.Excel.Application();
-            
-            exportarexcel.Application.Workbooks.Add(true);
+        private void excel(){
+            objExcel.Application objAplicacion = new objExcel.Application();
+            Workbook objLibro = objAplicacion.Workbooks.Add(XlSheetType.xlWorksheet);
+            Worksheet objHoja = (Worksheet)objAplicacion.ActiveSheet;
 
-            int IndiceColumna = 0;
-
-            foreach (DataGridViewColumn columna in datalistado.Columns)
+            foreach (DataGridViewColumn columna in dgvInformation.Columns)
             {
-                IndiceColumna++;
-                exportarexcel.Cells[1, IndiceColumna] = columna.Name;
-            }
-
-            int IndeceFila = 0;
-
-            foreach (DataGridViewRow fila in datalistado.Rows)
-            {
-                IndeceFila++;
-                IndiceColumna = 0;
-
-                foreach (DataGridViewColumn columna in datalistado.Columns)
+                objHoja.Cells[1, columna.Index + 1] = columna.HeaderText;
+                foreach(DataGridViewRow fila in dgvInformation.Rows)
                 {
-                    IndiceColumna++;
-                    exportarexcel.Cells[IndeceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    objHoja.Cells[fila.Index + 2, columna.Index + 1] = fila.Cells[columna.Index].Value;
                 }
             }
-            exportarexcel.Visible = true;
+            objAplicacion.Visible = true;
         }
         private void BtnExcel_Click(object sender, EventArgs e)
         {
-            
-            ExportarDatos(dgvInformation);
+            excel();
         }
+
+        private void copyAlltoClipboard()
+        {
+            //to remove the first blank column from datagridview
+        dgvInformation.RowHeadersVisible = false;
+        dgvInformation.SelectAll();
+        DataObject dataObj = dgvInformation.GetClipboardContent();
+        if (dataObj != null)
+            Clipboard.SetDataObject(dataObj);
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occurred while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
         
         //Para Mantenimientos
         private void ConfigurationTable(List<Mantenimiento> auxMaintenance)
