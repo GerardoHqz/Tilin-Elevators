@@ -190,5 +190,4 @@ C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_T
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.genruntimeconfig.cache
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.csproj.ResolveComReference.cache
-C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.csproj.AssemblyReference.cache
 C:\Users\paolo\Desktop\Work\pepinesa\Tilin-Elevators\Elevators Tilin\Elevators_Tilin\obj\Debug\net5.0-windows\Elevators_Tilin.View.FrmElevatorsList.resources

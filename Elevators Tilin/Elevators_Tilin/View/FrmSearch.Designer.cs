@@ -29,7 +29,6 @@ namespace Elevators_Tilin.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvInformation = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,23 +44,11 @@ namespace Elevators_Tilin.View
             this.cmbUpdateName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbName = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Azure;
-            this.btnSearch.BackgroundImage = global::Elevators_Tilin.Properties.Resources.lupa3;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.Location = new System.Drawing.Point(683, 179);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(39, 37);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvInformation
             // 
@@ -205,24 +192,36 @@ namespace Elevators_Tilin.View
             this.cmbName.Size = new System.Drawing.Size(355, 27);
             this.cmbName.TabIndex = 8;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Image = global::Elevators_Tilin.Properties.Resources.lupa3;
+            this.btnSearch.Location = new System.Drawing.Point(684, 176);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(44, 40);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // FrmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 632);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cmbName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvInformation);
-            this.Controls.Add(this.btnSearch);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Text = "FrmSearch";
             this.Load += new System.EventHandler(this.FrmSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +229,6 @@ namespace Elevators_Tilin.View
 
         #endregion
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvInformation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNameUpdate;
@@ -247,5 +245,6 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantitiy;
         private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producer;
+        private System.Windows.Forms.PictureBox btnSearch;
     }
 }

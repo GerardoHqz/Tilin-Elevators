@@ -122,14 +122,14 @@ namespace Elevators_Tilin.View
         private void BtnInventory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmInventory(), sender);
-            lblTitle.Text = "Inventario";
+            lblTitle.Text = "Registrar Repuesto";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmSearch(), sender);
-            lblTitle.Text = "Buscador";
+            lblTitle.Text = "Inventario";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
