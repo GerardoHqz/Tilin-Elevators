@@ -54,22 +54,29 @@ namespace Elevators_Tilin.View
         //Añadiendo funcion para añadir productos al dgv
         private void AddProduct()
         {
-            var db = new SIAL_DBContext();
-            List<Repuesto> repuestos = db.Repuestos.ToList();
-            int cant = Convert.ToInt32(txtQuantity.Text);
-            List<Repuesto> exist = repuestos.Where(x => x.Nombre == cmbParts.Text && x.Cantidad>=cant).ToList();
-            bool verification = cant > 0;
-            if(cant < 0)
+            try
             {
-                MessageBox.Show("La cantidad debe ser mayor a 0");
+                var db = new SIAL_DBContext();
+                List<Repuesto> repuestos = db.Repuestos.ToList();
+                int cant = Convert.ToInt32(txtQuantity.Text);
+                List<Repuesto> exist = repuestos.Where(x => x.Nombre == cmbParts.Text && x.Cantidad >= cant).ToList();
+                bool verification = cant > 0;
+                if (cant < 0)
+                {
+                    MessageBox.Show("La cantidad debe ser mayor a 0");
+                }
+                else if (verification && exist.Count() > 0)
+                {
+                    dgvParts.Rows.Add(cmbParts.Text, cant);
+                }
+                else
+                {
+                    MessageBox.Show("No hay suficientes productos en stock");
+                }
             }
-            else if (verification && exist.Count() > 0)
+            catch (Exception ex)
             {
-                dgvParts.Rows.Add(cmbParts.Text, cant);
-            }
-            else
-            {
-                MessageBox.Show("No hay suficientes productos en stock");
+                MessageBox.Show("Ha ocurrido un error, verifique los datos");
             }
         }
 
@@ -217,8 +224,16 @@ namespace Elevators_Tilin.View
 
         private void btnRepair_Click(object sender, EventArgs e)
         {
-            Repair();
-            Clear();
+            try
+            {
+                Repair();
+                Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error, verifique los datos");
+                Clear();
+            }
         }
 
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)

@@ -31,6 +31,11 @@ namespace Elevators_Tilin.View
         {
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvInformation = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantitiy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -40,11 +45,6 @@ namespace Elevators_Tilin.View
             this.cmbUpdateName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbName = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantitiy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@ namespace Elevators_Tilin.View
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Azure;
-            this.btnSearch.BackgroundImage = global::Elevators_Tilin.Properties.Resources.search31;
+            this.btnSearch.BackgroundImage = global::Elevators_Tilin.Properties.Resources.lupa3;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.Location = new System.Drawing.Point(683, 179);
@@ -79,6 +79,41 @@ namespace Elevators_Tilin.View
             this.dgvInformation.RowTemplate.Height = 25;
             this.dgvInformation.Size = new System.Drawing.Size(843, 351);
             this.dgvInformation.TabIndex = 3;
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Nombre";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.Width = 175;
+            // 
+            // Quantitiy
+            // 
+            this.Quantitiy.HeaderText = "Cantidad";
+            this.Quantitiy.MinimumWidth = 6;
+            this.Quantitiy.Name = "Quantitiy";
+            this.Quantitiy.Width = 125;
+            // 
+            // Model
+            // 
+            this.Model.HeaderText = "Modelo";
+            this.Model.MinimumWidth = 6;
+            this.Model.Name = "Model";
+            this.Model.Width = 175;
+            // 
+            // Producer
+            // 
+            this.Producer.HeaderText = "Fabricante";
+            this.Producer.MinimumWidth = 6;
+            this.Producer.Name = "Producer";
+            this.Producer.Width = 281;
             // 
             // label1
             // 
@@ -169,41 +204,6 @@ namespace Elevators_Tilin.View
             this.cmbName.Name = "cmbName";
             this.cmbName.Size = new System.Drawing.Size(355, 27);
             this.cmbName.TabIndex = 8;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Nombre";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.Width = 175;
-            // 
-            // Quantitiy
-            // 
-            this.Quantitiy.HeaderText = "Cantidad";
-            this.Quantitiy.MinimumWidth = 6;
-            this.Quantitiy.Name = "Quantitiy";
-            this.Quantitiy.Width = 125;
-            // 
-            // Model
-            // 
-            this.Model.HeaderText = "Modelo";
-            this.Model.MinimumWidth = 6;
-            this.Model.Name = "Model";
-            this.Model.Width = 175;
-            // 
-            // Producer
-            // 
-            this.Producer.HeaderText = "Fabricante";
-            this.Producer.MinimumWidth = 6;
-            this.Producer.Name = "Producer";
-            this.Producer.Width = 281;
             // 
             // FrmSearch
             // 

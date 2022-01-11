@@ -90,7 +90,7 @@ namespace Elevators_Tilin.View
         private void btnRegister_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmRegister(), sender);
-            lblTitle.Text = "Registrar Servicio";
+            lblTitle.Text = "Registrar Elevador";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
@@ -155,7 +155,7 @@ namespace Elevators_Tilin.View
         private void btnServices_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmServices(), sender);
-            lblTitle.Text = "Inventario";
+            lblTitle.Text = "Servicios";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
