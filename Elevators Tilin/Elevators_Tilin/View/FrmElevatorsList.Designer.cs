@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(283, 59);
+            this.label1.Location = new System.Drawing.Point(390, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 21;
@@ -52,7 +52,7 @@
             this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExcel.FlatAppearance.BorderSize = 0;
             this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Location = new System.Drawing.Point(796, 71);
+            this.btnExcel.Location = new System.Drawing.Point(903, 67);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(66, 49);
             this.btnExcel.TabIndex = 20;
@@ -66,7 +66,7 @@
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(670, 81);
+            this.btnSearch.Location = new System.Drawing.Point(777, 77);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(38, 32);
@@ -77,7 +77,7 @@
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(283, 83);
+            this.txtName.Location = new System.Drawing.Point(390, 79);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(381, 27);
@@ -86,11 +86,11 @@
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(46, 136);
+            this.dgv.Location = new System.Drawing.Point(64, 159);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 29;
-            this.dgv.Size = new System.Drawing.Size(852, 445);
+            this.dgv.Size = new System.Drawing.Size(1040, 531);
             this.dgv.TabIndex = 22;
             // 
             // cmbType
@@ -100,7 +100,7 @@
             this.cmbType.Items.AddRange(new object[] {
             "Elevador",
             "Vehículo"});
-            this.cmbType.Location = new System.Drawing.Point(111, 81);
+            this.cmbType.Location = new System.Drawing.Point(218, 77);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(127, 28);
             this.cmbType.TabIndex = 23;
@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(950, 632);
+            this.ClientSize = new System.Drawing.Size(1169, 744);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label1);

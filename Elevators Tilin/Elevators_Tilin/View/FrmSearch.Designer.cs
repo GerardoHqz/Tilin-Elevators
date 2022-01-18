@@ -45,6 +45,7 @@ namespace Elevators_Tilin.View
             this.label4 = new System.Windows.Forms.Label();
             this.cmbName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.PictureBox();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
@@ -59,12 +60,12 @@ namespace Elevators_Tilin.View
             this.Quantitiy,
             this.Model,
             this.Producer});
-            this.dgvInformation.Location = new System.Drawing.Point(58, 244);
+            this.dgvInformation.Location = new System.Drawing.Point(59, 255);
             this.dgvInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvInformation.Name = "dgvInformation";
             this.dgvInformation.RowHeadersWidth = 51;
             this.dgvInformation.RowTemplate.Height = 25;
-            this.dgvInformation.Size = new System.Drawing.Size(843, 351);
+            this.dgvInformation.Size = new System.Drawing.Size(1050, 456);
             this.dgvInformation.TabIndex = 3;
             // 
             // ID
@@ -106,7 +107,7 @@ namespace Elevators_Tilin.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(209, 183);
+            this.label1.Location = new System.Drawing.Point(294, 178);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 24);
             this.label1.TabIndex = 4;
@@ -161,7 +162,7 @@ namespace Elevators_Tilin.View
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtQuantity);
-            this.panel1.Location = new System.Drawing.Point(106, 63);
+            this.panel1.Location = new System.Drawing.Point(201, 57);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(748, 75);
             this.panel1.TabIndex = 6;
@@ -178,7 +179,7 @@ namespace Elevators_Tilin.View
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(106, 40);
+            this.label4.Location = new System.Drawing.Point(201, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 20);
             this.label4.TabIndex = 7;
@@ -187,7 +188,7 @@ namespace Elevators_Tilin.View
             // cmbName
             // 
             this.cmbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cmbName.Location = new System.Drawing.Point(309, 183);
+            this.cmbName.Location = new System.Drawing.Point(394, 178);
             this.cmbName.Name = "cmbName";
             this.cmbName.Size = new System.Drawing.Size(355, 27);
             this.cmbName.TabIndex = 8;
@@ -195,7 +196,7 @@ namespace Elevators_Tilin.View
             // btnSearch
             // 
             this.btnSearch.Image = global::Elevators_Tilin.Properties.Resources.lupa3;
-            this.btnSearch.Location = new System.Drawing.Point(684, 176);
+            this.btnSearch.Location = new System.Drawing.Point(769, 171);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(44, 40);
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -203,12 +204,26 @@ namespace Elevators_Tilin.View
             this.btnSearch.TabStop = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // btnExcel
+            // 
+            this.btnExcel.BackgroundImage = global::Elevators_Tilin.Properties.Resources.excel;
+            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Location = new System.Drawing.Point(1019, 166);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(66, 49);
+            this.btnExcel.TabIndex = 10;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // FrmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(950, 632);
+            this.ClientSize = new System.Drawing.Size(1169, 744);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cmbName);
             this.Controls.Add(this.label4);
@@ -246,5 +261,6 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producer;
         private System.Windows.Forms.PictureBox btnSearch;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

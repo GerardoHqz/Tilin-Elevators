@@ -72,7 +72,7 @@ namespace Elevators_Tilin.View
             this.pnlMainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMainMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMainMenu.Name = "pnlMainMenu";
-            this.pnlMainMenu.Size = new System.Drawing.Size(248, 791);
+            this.pnlMainMenu.Size = new System.Drawing.Size(248, 902);
             this.pnlMainMenu.TabIndex = 0;
             // 
             // btnEquipments
@@ -86,7 +86,7 @@ namespace Elevators_Tilin.View
             this.btnEquipments.ForeColor = System.Drawing.Color.White;
             this.btnEquipments.Image = global::Elevators_Tilin.Properties.Resources.lupa4;
             this.btnEquipments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEquipments.Location = new System.Drawing.Point(0, 628);
+            this.btnEquipments.Location = new System.Drawing.Point(0, 722);
             this.btnEquipments.Name = "btnEquipments";
             this.btnEquipments.Size = new System.Drawing.Size(248, 71);
             this.btnEquipments.TabIndex = 18;
@@ -107,7 +107,7 @@ namespace Elevators_Tilin.View
             this.btnServices.ForeColor = System.Drawing.Color.White;
             this.btnServices.Image = global::Elevators_Tilin.Properties.Resources.icoSearch;
             this.btnServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServices.Location = new System.Drawing.Point(0, 556);
+            this.btnServices.Location = new System.Drawing.Point(0, 650);
             this.btnServices.Name = "btnServices";
             this.btnServices.Size = new System.Drawing.Size(248, 72);
             this.btnServices.TabIndex = 17;
@@ -128,7 +128,7 @@ namespace Elevators_Tilin.View
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Elevators_Tilin.Properties.Resources.bucanding;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 479);
+            this.button2.Location = new System.Drawing.Point(0, 573);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(248, 77);
             this.button2.TabIndex = 16;
@@ -149,7 +149,7 @@ namespace Elevators_Tilin.View
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Elevators_Tilin.Properties.Resources.IcoInventario__1_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 402);
+            this.button3.Location = new System.Drawing.Point(0, 496);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(248, 77);
             this.button3.TabIndex = 15;
@@ -170,7 +170,7 @@ namespace Elevators_Tilin.View
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Elevators_Tilin.Properties.Resources.IcoRepairpng__1_;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 325);
+            this.button4.Location = new System.Drawing.Point(0, 419);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(248, 77);
             this.button4.TabIndex = 14;
@@ -191,7 +191,7 @@ namespace Elevators_Tilin.View
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Elevators_Tilin.Properties.Resources.IcoMantenimiento__1_;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 256);
+            this.button5.Location = new System.Drawing.Point(0, 350);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(248, 69);
             this.button5.TabIndex = 13;
@@ -212,7 +212,7 @@ namespace Elevators_Tilin.View
             this.btnVehicle.ForeColor = System.Drawing.Color.White;
             this.btnVehicle.Image = global::Elevators_Tilin.Properties.Resources.vehicleico;
             this.btnVehicle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehicle.Location = new System.Drawing.Point(0, 186);
+            this.btnVehicle.Location = new System.Drawing.Point(0, 280);
             this.btnVehicle.Name = "btnVehicle";
             this.btnVehicle.Size = new System.Drawing.Size(248, 70);
             this.btnVehicle.TabIndex = 8;
@@ -225,9 +225,9 @@ namespace Elevators_Tilin.View
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Elevators_Tilin.Properties.Resources.logo_tilin;
-            this.pictureBox2.Location = new System.Drawing.Point(208, 766);
+            this.pictureBox2.Location = new System.Drawing.Point(226, 888);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 10);
+            this.pictureBox2.Size = new System.Drawing.Size(16, 10);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -243,7 +243,7 @@ namespace Elevators_Tilin.View
             this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Image = global::Elevators_Tilin.Properties.Resources.elevatorico;
             this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegister.Location = new System.Drawing.Point(0, 109);
+            this.btnRegister.Location = new System.Drawing.Point(0, 203);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(248, 77);
             this.btnRegister.TabIndex = 3;
@@ -260,15 +260,15 @@ namespace Elevators_Tilin.View
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(248, 109);
+            this.pnlLogo.Size = new System.Drawing.Size(248, 203);
             this.pnlLogo.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Elevators_Tilin.Properties.Resources.Logo_SIAL;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(-37, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(239, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(302, 203);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -281,7 +281,7 @@ namespace Elevators_Tilin.View
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(248, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(968, 109);
+            this.pnlTitle.Size = new System.Drawing.Size(1190, 109);
             this.pnlTitle.TabIndex = 1;
             // 
             // btnClose
@@ -304,7 +304,7 @@ namespace Elevators_Tilin.View
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitle.Location = new System.Drawing.Point(417, 16);
+            this.lblTitle.Location = new System.Drawing.Point(458, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(274, 67);
             this.lblTitle.TabIndex = 0;
@@ -316,7 +316,7 @@ namespace Elevators_Tilin.View
             this.pnlPrincipal.Controls.Add(this.pctHome1);
             this.pnlPrincipal.Location = new System.Drawing.Point(248, 107);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(968, 684);
+            this.pnlPrincipal.Size = new System.Drawing.Size(1187, 792);
             this.pnlPrincipal.TabIndex = 2;
             // 
             // pctHome1
@@ -325,7 +325,7 @@ namespace Elevators_Tilin.View
             this.pctHome1.Location = new System.Drawing.Point(0, 0);
             this.pctHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pctHome1.Name = "pctHome1";
-            this.pctHome1.Size = new System.Drawing.Size(968, 684);
+            this.pctHome1.Size = new System.Drawing.Size(1187, 791);
             this.pctHome1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctHome1.TabIndex = 0;
             this.pctHome1.TabStop = false;
@@ -335,7 +335,7 @@ namespace Elevators_Tilin.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1216, 791);
+            this.ClientSize = new System.Drawing.Size(1438, 902);
             this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMainMenu);

@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Validar_TextBox;
+using Microsoft.Office.Interop.Excel;
+using objExcel = Microsoft.Office.Interop.Excel;
 
 namespace Elevators_Tilin.View
 {
@@ -21,25 +23,10 @@ namespace Elevators_Tilin.View
 
         private void FrmSearch_Load(object sender, EventArgs e)
         {
-            LoadTheme();
             ChargerProducts();
             cmbUpdateName.Text = "";
         }   
-
-        private void LoadTheme()
-        {
-            foreach (Control btns in this.Controls)
-            {
-                if (btns.GetType() == typeof(Button))
-                {
-                    Button btn = (Button)btns;
-                    btn.BackColor = Extras.ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = Extras.ThemeColor.SecundaryColor;
-                }
-            }
-        }
-
+       
         private void ChargerProducts(){
             var db = new SIAL_DBContext();
             List<Repuesto> repuestos = db.Repuestos.ToList();
@@ -137,6 +124,27 @@ namespace Elevators_Tilin.View
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
+        }
+
+        private void excel(){
+            objExcel.Application objAplicacion = new objExcel.Application();
+            Workbook objLibro = objAplicacion.Workbooks.Add(XlSheetType.xlWorksheet);
+            Worksheet objHoja = (Worksheet)objAplicacion.ActiveSheet;
+
+            foreach (DataGridViewColumn columna in dgvInformation.Columns)
+            {
+                objHoja.Cells[1, columna.Index + 1] = columna.HeaderText;
+                foreach(DataGridViewRow fila in dgvInformation.Rows)
+                {
+                    objHoja.Cells[fila.Index + 2, columna.Index + 1] = fila.Cells[columna.Index].Value;
+                }
+            }
+            objAplicacion.Visible = true;
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            excel();
         }
     }
 }

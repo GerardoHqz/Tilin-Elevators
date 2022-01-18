@@ -40,35 +40,6 @@ namespace Elevators_Tilin.View
         {
             excel();
         }
-
-        private void copyAlltoClipboard()
-        {
-            //to remove the first blank column from datagridview
-        dgvInformation.RowHeadersVisible = false;
-        dgvInformation.SelectAll();
-        DataObject dataObj = dgvInformation.GetClipboardContent();
-        if (dataObj != null)
-            Clipboard.SetDataObject(dataObj);
-        }
-
-        private void releaseObject(object obj)
-        {
-            try
-            {
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                obj = null;
-            }
-            catch (Exception ex)
-            {
-                obj = null;
-                MessageBox.Show("Exception Occurred while releasing object " + ex.ToString());
-            }
-            finally
-            {
-                GC.Collect();
-            }
-        }
-
         
         //Para Mantenimientos
         private void ConfigurationTable(List<Mantenimiento> auxMaintenance)

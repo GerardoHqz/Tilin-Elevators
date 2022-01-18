@@ -90,7 +90,7 @@ namespace Elevators_Tilin.View
         private void btnRegister_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmRegister(), sender);
-            lblTitle.Text = "Registrar Elevador";
+            lblTitle.Text = "    Registrar Elevador";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
@@ -98,7 +98,7 @@ namespace Elevators_Tilin.View
         private void btnVehicle_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmVehicle(), sender);
-            lblTitle.Text = "Registrar Automovil";
+            lblTitle.Text = "    Registrar Automovil";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
@@ -106,7 +106,7 @@ namespace Elevators_Tilin.View
         private void BtnMaintenance_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmMaintenance(), sender);
-            lblTitle.Text = "Mantenimiento";
+            lblTitle.Text = "     Mantenimiento";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
@@ -114,7 +114,7 @@ namespace Elevators_Tilin.View
         private void BtnRepair_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmRepair(), sender);
-            lblTitle.Text = "Reparaciones";
+            lblTitle.Text = "     Reparaciones";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
@@ -122,14 +122,14 @@ namespace Elevators_Tilin.View
         private void BtnInventory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmInventory(), sender);
-            lblTitle.Text = "Registrar Repuesto";
+            lblTitle.Text = "    Registrar Repuesto";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmSearch(), sender);
-            lblTitle.Text = "Inventario";
+            lblTitle.Text = "     Inventario";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
@@ -155,7 +155,7 @@ namespace Elevators_Tilin.View
         private void btnServices_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmServices(), sender);
-            lblTitle.Text = "Servicios";
+            lblTitle.Text = "     Servicios";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }
@@ -163,7 +163,7 @@ namespace Elevators_Tilin.View
         private void btnEquipments_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmElevatorsList(), sender);
-            lblTitle.Text = "Equipos";
+            lblTitle.Text = "      Equipos";
             lblTitle.Location = new Point(300, 12);
             this.Show();
         }

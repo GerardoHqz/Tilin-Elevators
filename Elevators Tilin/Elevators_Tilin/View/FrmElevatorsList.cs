@@ -66,7 +66,7 @@ namespace Elevators_Tilin.View
 
 
                 DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
-                col2.HeaderText = "No. Serie";
+                col2.HeaderText = "No. Equipo";
                 col2.Width = 125;
                 dgv.Columns.Add(col2);
 
@@ -166,8 +166,8 @@ namespace Elevators_Tilin.View
             {
                 dgv.Rows.Add(
                         element.Id,
-                        element.Marca,
                         element.NumeroSerie,
+                        element.Marca,
                         element.ContratoInicio,
                         element.ContratoFinal,
                         element.Direccion,

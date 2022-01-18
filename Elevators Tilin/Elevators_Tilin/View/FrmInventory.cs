@@ -19,6 +19,11 @@ namespace Elevators_Tilin.View
             InitializeComponent();
         }
 
+        private void FrmInventory_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
+
         //Para cambiar los botones del color correspondiente
         private void LoadTheme()
         {
@@ -32,11 +37,6 @@ namespace Elevators_Tilin.View
                     btn.FlatAppearance.BorderColor = Extras.ThemeColor.SecundaryColor;
                 }
             }
-        }
-
-        private void FrmInventory_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
