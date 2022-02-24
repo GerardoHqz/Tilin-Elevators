@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GeKPl6AMFY7Il52+tVv3uAls4/M1FqLUc8vPserO3jKq5NVnUtpwrTJ8Ksu/kYalAJsF/oSXOQRCV9rGOB0jjg==",
+  "dgSpecHash": "WbUNpaMqOgfFOB7XDk7UM5p9v4FdgTK6z8P8pnUAAEAsHWrLW1s9+3RsvIuF/IFSh8VDfr5txf9tiiCv9aPl5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\paolo\\Desktop\\Work\\pepinesa\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj",
   "expectedPackageFiles": [
@@ -100,10 +100,10 @@
     "C:\\Users\\paolo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
     "C:\\Users\\paolo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\paolo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
   "logs": []
 }

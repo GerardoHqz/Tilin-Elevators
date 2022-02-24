@@ -162,7 +162,6 @@ namespace Elevators_Tilin.View
                     }
                 }
                 
-                //aQUI FALLA
                 List<Repuesto> repuestos = db.Repuestos.ToList();
                 for (int i = 0; i < dgvParts.Rows.Count -1; i++)
                 {
@@ -196,14 +195,6 @@ namespace Elevators_Tilin.View
             else{
                 MessageBox.Show("Numero de placa/serie incorrecto o datos erroneos!", "SIAL", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            // if(band == false || band2 == false){
-            //     MessageBox.Show("Numero de serie o placa no existente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
-            // }
-            // else{
-            //     MessageBox.Show("Reparacion registrada correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // }
         }
 
         private void Clear()
@@ -237,6 +228,16 @@ namespace Elevators_Tilin.View
         }
 
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloNumeros(e);
         }

@@ -29,7 +29,7 @@ namespace Elevators_Tilin.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.dtpMaintain = new System.Windows.Forms.DateTimePicker();
             this.lbl4 = new System.Windows.Forms.Label();
             this.cmbState = new System.Windows.Forms.ComboBox();
@@ -41,26 +41,29 @@ namespace Elevators_Tilin.View
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtRegister = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRegister
+            // btnUpdate
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.White;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Location = new System.Drawing.Point(246, 617);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(223, 85);
-            this.btnRegister.TabIndex = 19;
-            this.btnRegister.Text = "Registrar";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(379, 617);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(223, 85);
+            this.btnUpdate.TabIndex = 19;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dtpMaintain
             // 
             this.dtpMaintain.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpMaintain.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpMaintain.Location = new System.Drawing.Point(346, 194);
+            this.dtpMaintain.Location = new System.Drawing.Point(346, 235);
             this.dtpMaintain.Name = "dtpMaintain";
             this.dtpMaintain.Size = new System.Drawing.Size(123, 32);
             this.dtpMaintain.TabIndex = 14;
@@ -70,7 +73,7 @@ namespace Elevators_Tilin.View
             this.lbl4.AutoSize = true;
             this.lbl4.BackColor = System.Drawing.Color.White;
             this.lbl4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl4.Location = new System.Drawing.Point(113, 202);
+            this.lbl4.Location = new System.Drawing.Point(113, 243);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(227, 22);
             this.lbl4.TabIndex = 13;
@@ -84,7 +87,7 @@ namespace Elevators_Tilin.View
             this.cmbState.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cmbState.Location = new System.Drawing.Point(768, 80);
+            this.cmbState.Location = new System.Drawing.Point(769, 158);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(149, 33);
             this.cmbState.TabIndex = 18;
@@ -94,7 +97,7 @@ namespace Elevators_Tilin.View
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.White;
             this.lbl1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl1.Location = new System.Drawing.Point(103, 83);
+            this.lbl1.Location = new System.Drawing.Point(103, 164);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(180, 22);
             this.lbl1.TabIndex = 11;
@@ -106,7 +109,7 @@ namespace Elevators_Tilin.View
             this.txtEquipNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEquipNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEquipNumber.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEquipNumber.Location = new System.Drawing.Point(288, 81);
+            this.txtEquipNumber.Location = new System.Drawing.Point(288, 162);
             this.txtEquipNumber.Name = "txtEquipNumber";
             this.txtEquipNumber.Size = new System.Drawing.Size(149, 32);
             this.txtEquipNumber.TabIndex = 9;
@@ -126,7 +129,7 @@ namespace Elevators_Tilin.View
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl2.Location = new System.Drawing.Point(593, 86);
+            this.lbl2.Location = new System.Drawing.Point(594, 164);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(169, 22);
             this.lbl2.TabIndex = 12;
@@ -146,7 +149,7 @@ namespace Elevators_Tilin.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(582, 199);
+            this.label1.Location = new System.Drawing.Point(583, 243);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 22);
             this.label1.TabIndex = 10;
@@ -156,7 +159,7 @@ namespace Elevators_Tilin.View
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtName.Location = new System.Drawing.Point(768, 194);
+            this.txtName.Location = new System.Drawing.Point(769, 238);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(278, 32);
             this.txtName.TabIndex = 17;
@@ -171,18 +174,53 @@ namespace Elevators_Tilin.View
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(113, 617);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(223, 85);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Registrar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // txtRegister
+            // 
+            this.txtRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRegister.Location = new System.Drawing.Point(241, 84);
+            this.txtRegister.Name = "txtRegister";
+            this.txtRegister.Size = new System.Drawing.Size(130, 27);
+            this.txtRegister.TabIndex = 21;
+            this.txtRegister.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegister_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(103, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 22);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "N° de reporte:";
+            // 
             // FrmMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1169, 744);
+            this.Controls.Add(this.txtRegister);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dtpMaintain);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.cmbState);
             this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.txtEquipNumber);
             this.Controls.Add(this.lbl3);
@@ -200,7 +238,7 @@ namespace Elevators_Tilin.View
 
         #endregion
 
-        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.DateTimePicker dtpMaintain;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.ComboBox cmbState;
@@ -212,5 +250,8 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtRegister;
+        private System.Windows.Forms.Label label2;
     }
 }

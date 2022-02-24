@@ -153,7 +153,7 @@
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Items.AddRange(new object[] {
             "Reparaciones",
-            "Mantenimiento"});
+            "Mantenimientos"});
             this.cmbType.Location = new System.Drawing.Point(217, 75);
             this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbType.Name = "cmbType";

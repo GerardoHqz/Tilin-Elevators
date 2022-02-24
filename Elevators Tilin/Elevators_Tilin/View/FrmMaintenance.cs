@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Validar_TextBox;
 
 namespace Elevators_Tilin.View
 {
@@ -60,8 +61,6 @@ namespace Elevators_Tilin.View
         
         private void Maintenance()
         {
-
-  
             //Creando y Guardando los datos en la base de datos
                 string equipNumber = txtEquipNumber.Text;
                 string description = txtDescription.Text;
@@ -138,6 +137,39 @@ namespace Elevators_Tilin.View
             txtName.Text = "";
             cmbState.Text = "";
             dtpMaintain.Value = DateTime.Now;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            using (var db = new SIAL_DBContext())
+            {
+                List<Mantenimiento> mantenimientos = db.Mantenimientos.ToList();
+                //Primera validacion para saber si existe el equipo
+                List<Mantenimiento>exist = mantenimientos.Where(x => x.NumeroSerie == txtEquipNumber.Text).ToList();
+                //Segunda validacion para saber si existe el numero de registro del mantenimiento
+                // List<Mantenimiento>exist2 = mantenimientos.Where(x => x.codigoRegistro == txtRegister ).ToList();
+                if(exist.Count > 0 ){
+                    foreach(var item in mantenimientos){
+                        if(item.NumeroSerie == txtEquipNumber.Text){
+                            item.FechaMantenimiento = dtpMaintain.Value;
+                            item.Descripcion = txtDescription.Text;
+                            item.Tecnico = txtName.Text;
+                            item.Estado = cmbState.Text;
+                            db.SaveChanges();
+                            MessageBox.Show("Mantenimiento actualizado correctamente", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El numero de serie o numero de registro no existen!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
         }
     }
 }  

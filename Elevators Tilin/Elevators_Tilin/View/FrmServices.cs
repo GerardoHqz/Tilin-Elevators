@@ -47,7 +47,7 @@ namespace Elevators_Tilin.View
             //limpiando tabla
             dgvInformation.Rows.Clear();
 
-            //Agregando informacion
+            //Agregando informacion 
             foreach(var element in auxMaintenance)
             {
                 dgvInformation.Rows.Add(
@@ -81,19 +81,21 @@ namespace Elevators_Tilin.View
             }
         }
         private void ViewInformation(){
-            var db = new SIAL_DBContext();
-            if(cmbType.Text == "Reparaciones")
-            {
-                List<Reparacion> Repair = db.Reparacions.ToList();
-                List<Reparacion> auxRepair = Repair.Where(x => (x.NumeroSerie.ToLower().Contains(txtName.Text.ToLower()))).ToList();
-                ConfigurationTable2(Repair);
+            using (var db  = new SIAL_DBContext()){
+                if(cmbType.Text == "Reparaciones")
+                {
+                    List<Reparacion> Repair = db.Reparacions.ToList();
+                    List<Reparacion> auxRepair = Repair.Where(x => (x.NumeroSerie.ToLower().Contains(txtName.Text.ToLower()))).ToList();
+                    ConfigurationTable2(auxRepair);
+                }
+                else if(cmbType.Text == "Mantenimientos")
+                {
+                    List<Mantenimiento> Maintenance = db.Mantenimientos.ToList();
+                    List<Mantenimiento> auxMaintenance = Maintenance.Where(x => (x.NumeroSerie.ToLower().Contains(txtName.Text.ToLower()))).ToList();
+                    ConfigurationTable(auxMaintenance);
+                }
             }
-            else
-            {
-                List<Mantenimiento> Maintenance = db.Mantenimientos.ToList();
-                List<Mantenimiento> auxMaintenance = Maintenance.Where(x => (x.NumeroSerie.ToLower().Contains(txtName.Text.ToLower()))).ToList();
-                ConfigurationTable(Maintenance);
-            }
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

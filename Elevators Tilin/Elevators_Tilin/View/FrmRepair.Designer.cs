@@ -51,6 +51,9 @@ namespace Elevators_Tilin.View
             this.btnAdd = new System.Windows.Forms.Button();
             this.label5004 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
+            this.txtRegister = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,9 +62,9 @@ namespace Elevators_Tilin.View
             // 
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Location = new System.Drawing.Point(836, 619);
+            this.btnRegister.Location = new System.Drawing.Point(739, 633);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(207, 84);
+            this.btnRegister.Size = new System.Drawing.Size(172, 84);
             this.btnRegister.TabIndex = 21;
             this.btnRegister.Text = "Registrar";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -143,7 +146,7 @@ namespace Elevators_Tilin.View
             this.lbl3.AutoSize = true;
             this.lbl3.BackColor = System.Drawing.Color.White;
             this.lbl3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl3.Location = new System.Drawing.Point(574, 74);
+            this.lbl3.Location = new System.Drawing.Point(715, 102);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(321, 22);
             this.lbl3.TabIndex = 17;
@@ -162,7 +165,7 @@ namespace Elevators_Tilin.View
             // txtDescription
             // 
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescription.Location = new System.Drawing.Point(574, 112);
+            this.txtDescription.Location = new System.Drawing.Point(715, 140);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(413, 147);
@@ -198,7 +201,7 @@ namespace Elevators_Tilin.View
             this.dgvParts.Name = "dgvParts";
             this.dgvParts.RowHeadersWidth = 51;
             this.dgvParts.RowTemplate.Height = 25;
-            this.dgvParts.Size = new System.Drawing.Size(633, 209);
+            this.dgvParts.Size = new System.Drawing.Size(596, 209);
             this.dgvParts.TabIndex = 23;
             // 
             // ColName
@@ -219,7 +222,7 @@ namespace Elevators_Tilin.View
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Elevators_Tilin.Properties.Resources.imgReparacion;
-            this.pictureBox1.Location = new System.Drawing.Point(836, 313);
+            this.pictureBox1.Location = new System.Drawing.Point(810, 329);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(248, 257);
@@ -264,7 +267,7 @@ namespace Elevators_Tilin.View
             // 
             this.label5004.AutoSize = true;
             this.label5004.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5004.Location = new System.Drawing.Point(123, 80);
+            this.label5004.Location = new System.Drawing.Point(145, 78);
             this.label5004.Name = "label5004";
             this.label5004.Size = new System.Drawing.Size(142, 22);
             this.label5004.TabIndex = 13;
@@ -282,12 +285,47 @@ namespace Elevators_Tilin.View
             this.cmbType.Size = new System.Drawing.Size(121, 28);
             this.cmbType.TabIndex = 20;
             // 
+            // txtRegister
+            // 
+            this.txtRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRegister.Location = new System.Drawing.Point(293, 25);
+            this.txtRegister.Name = "txtRegister";
+            this.txtRegister.Size = new System.Drawing.Size(121, 27);
+            this.txtRegister.TabIndex = 29;
+            this.txtRegister.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegister_KeyPress);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(956, 632);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(172, 85);
+            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(158, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 22);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "N° de reporte:";
+            // 
             // FrmRepair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1169, 744);
+            this.Controls.Add(this.txtRegister);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.pictureBox1);
@@ -342,5 +380,8 @@ namespace Elevators_Tilin.View
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCant;
+        private System.Windows.Forms.TextBox txtRegister;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label2;
     }
 }
