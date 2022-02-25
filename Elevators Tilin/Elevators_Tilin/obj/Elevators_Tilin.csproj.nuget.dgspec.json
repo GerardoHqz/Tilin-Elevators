@@ -1,28 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paolo\\Desktop\\Work\\pepinesa\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj": {}
+    "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paolo\\Desktop\\Work\\pepinesa\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj": {
+    "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paolo\\Desktop\\Work\\pepinesa\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj",
+        "projectUniqueName": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj",
         "projectName": "Elevators_Tilin",
-        "projectPath": "C:\\Users\\paolo\\Desktop\\Work\\pepinesa\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj",
-        "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paolo\\Desktop\\Work\\pepinesa\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\obj\\",
+        "projectPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\Elevators_Tilin.csproj",
+        "packagesPath": "C:\\Users\\Gerardo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Elevators Tilin\\Elevators_Tilin\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\paolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Gerardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -76,7 +72,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[5.0.14, 5.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
@@ -95,7 +91,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
