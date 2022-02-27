@@ -44,7 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dtpStartcontract = new System.Windows.Forms.DateTimePicker();
             this.lbl4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,15 +215,16 @@
             this.lbl4.TabIndex = 44;
             this.lbl4.Text = "Fecha de inicio de contrato:";
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(322, 451);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 64);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(322, 451);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(195, 64);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmVehicle
             // 
@@ -231,7 +232,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1023, 558);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dtpFinishcontract);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpStartcontract);
@@ -276,6 +277,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpStartcontract;
         private System.Windows.Forms.Label lbl4;
-        private Button button1;
+        private Button btnUpdate;
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wUrBVJRgN1RR5oDEpBLsq7zQrsnwYvPq2nHSZKxqWlwMoMbSR6RHP1bO3VgmLZiAAfRY2zcOXuO9EvPDp8VMOQ==",
+  "dgSpecHash": "cQz+2rqNmYcj7QIovlOfUtwirMnOW8g9KvM/28kuXnqUgb6nYiYeesc1HymUt3bITJ5cYH2o1KXu5YaXkB6b3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Nueva carpeta\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
+  "projectFilePath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gerardo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Gerardo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

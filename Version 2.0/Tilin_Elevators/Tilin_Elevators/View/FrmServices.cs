@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tilin_Elevators.ContextSIAL;
-//using Microsoft.Office.Interop.Excel;
-//using objExcel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
+using objExcel = Microsoft.Office.Interop.Excel;
 
 
 namespace Elevators_Tilin.View
@@ -23,19 +23,19 @@ namespace Elevators_Tilin.View
         }
         private void excel()
         {
-            //objExcel.Application objAplicacion = new objExcel.Application();
-            //Workbook objLibro = objAplicacion.Workbooks.Add(XlSheetType.xlWorksheet);
-            //Worksheet objHoja = (Worksheet)objAplicacion.ActiveSheet;
+            objExcel.Application objAplicacion = new objExcel.Application();
+            Workbook objLibro = objAplicacion.Workbooks.Add(XlSheetType.xlWorksheet);
+            Worksheet objHoja = (Worksheet)objAplicacion.ActiveSheet;
 
-            //foreach (DataGridViewColumn columna in dgvInformation.Columns)
-            //{
-            //    objHoja.Cells[1, columna.Index + 1] = columna.HeaderText;
-            //    foreach (DataGridViewRow fila in dgvInformation.Rows)
-            //    {
-            //        objHoja.Cells[fila.Index + 2, columna.Index + 1] = fila.Cells[columna.Index].Value;
-            //    }
-            //}
-            //objAplicacion.Visible = true;
+            foreach (DataGridViewColumn columna in dgvInformation.Columns)
+            {
+                objHoja.Cells[1, columna.Index + 1] = columna.HeaderText;
+                foreach (DataGridViewRow fila in dgvInformation.Rows)
+                {
+                    objHoja.Cells[fila.Index + 2, columna.Index + 1] = fila.Cells[columna.Index].Value;
+                }
+            }
+            objAplicacion.Visible = true;
         }
         private void BtnExcel_Click(object sender, EventArgs e)
         {

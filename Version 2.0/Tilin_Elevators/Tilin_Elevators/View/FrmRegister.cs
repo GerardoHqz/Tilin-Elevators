@@ -88,6 +88,44 @@ namespace Elevators_Tilin.View
 
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            using(var db = new SIAL_DBContext())
+            {
+                List<Equipo> elevators = db.Equipos.ToList();
+                List<Equipo> validation = elevators.Where(x => x.NumeroSerie == txtNumberRegister.Text).ToList();
+                
+                if (txtBrand.Text == string.Empty || txtNumberRegister.Text == string.Empty || txtDirection.Text == string.Empty || txtLevels.Text == string.Empty || txtSpeed.Text == string.Empty || txtVoltage.Text == string.Empty)
+                {
+                    MessageBox.Show("Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if(validation.Count < 0)
+                {
+                    MessageBox.Show("El numero de equipo no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    foreach(var item in elevators)
+                    {
+                        if(item.NumeroSerie == txtNumberRegister.Text)
+                        {
+                            item.ContratoFinal = dtpFinishcontract.Value;
+                            item.ContratoInicio = dtpStartcontract.Value;
+                            item.Direccion = txtDirection.Text;
+                            item.Marca = txtBrand.Text;
+                            item.Niveles = Convert.ToInt32(txtLevels.Text);
+                            item.NumeroSerie = txtNumberRegister.Text;
+                            item.Velocidad = Convert.ToDouble(txtSpeed.Text);
+                            item.Voltaje = Convert.ToDouble(txtVoltage.Text);
+                            db.SaveChanges();
+                            MessageBox.Show("Equipo actualizado correctamente", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear();
+                        }
+                    }
+                }
+            }
+        }
+
         private void Clear()
         {
             txtNumberRegister.Text = "";
@@ -114,6 +152,7 @@ namespace Elevators_Tilin.View
         {
             Validar.NumerosDecimales(e);
         }
+
     }
 }
 

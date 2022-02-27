@@ -95,7 +95,14 @@ namespace Elevators_Tilin.View
             bool band = true;
             bool band2 = true;
 
-            if (verification && (exist.Count() > 0 || exist2.Count() > 0))
+            //Validacion para los numeros registros no se repitan
+            List<Reparacion> validation = reparaciones.Where(x => x.NumeroRegistro == Convert.ToInt32(txtRegister.Text)).ToList();
+
+            if (validation.Count() > 0)
+            {
+                MessageBox.Show("El Numero de registro ya existe previamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (verification && (exist.Count() > 0 || exist2.Count() > 0))
             {
 
                 if (cmbType.Text == "Elevador")
@@ -244,7 +251,35 @@ namespace Elevators_Tilin.View
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            using (var db = new SIAL_DBContext())
+            {
+                List<Reparacion> repairs = db.Reparacions.ToList();
+                //Primera validacion para saber si existe el equipo
+                List<Reparacion> exist = repairs.Where(x => x.NumeroSerie == txtEquipNumber.Text).ToList();
+                //Segunda validacion para saber si existe el numero de registro del mantenimiento
+                List<Reparacion>exist2 = repairs.Where(x => x.NumeroRegistro == Convert.ToInt32(txtRegister.Text)).ToList();
+                if (exist.Count > 0)
+                {
+                    foreach (var item in repairs)
+                    {
+                        if (item.NumeroSerie == txtEquipNumber.Text)
+                        {
+                            item.FechaReparacion = dtpRepair.Value;
+                            item.NumeroSerie = txtEquipNumber.Text;
+                            item.Descripcion = txtDescription.Text;
+                            item.Tecnico = txtName.Text;
+                            item.Estado = cmbState.Text;
+                            item.NumeroRegistro = Convert.ToInt32(txtRegister.Text);
+                            db.SaveChanges();
+                            MessageBox.Show("Registro actualizado correctamente", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El numero de serie o numero de registro no existen!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void txtRegister_KeyPress(object sender, KeyPressEventArgs e)

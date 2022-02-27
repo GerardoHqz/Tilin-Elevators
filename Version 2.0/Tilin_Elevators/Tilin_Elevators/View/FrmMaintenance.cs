@@ -67,6 +67,7 @@ namespace Elevators_Tilin.View
             string name = txtName.Text;
             string state = cmbState.Text;
             DateTime date = dtpMaintain.Value;
+            int numRegister = Convert.ToInt32(txtRegister.Text);
 
             using (var db = new SIAL_DBContext())
             {
@@ -80,8 +81,15 @@ namespace Elevators_Tilin.View
                 List<Equipo> exist = equipos.Where(x => x.NumeroSerie == equipNumber).ToList();
                 List<Automovil> exist2 = automoviles.Where(x => x.Placa == equipNumber).ToList();
 
+                //Validacion para los numeros registros no se repitan
+                List<Mantenimiento> maintent = db.Mantenimientos.ToList();
+                List<Mantenimiento> validation = maintent.Where(x => x.NumeroRegistro == Convert.ToInt32(txtRegister.Text)).ToList();
 
-                if (exist.Count() > 0)
+                if(validation.Count() > 0)
+                {
+                    MessageBox.Show("El Numero de registro ya existe previamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (exist.Count() > 0)
                 {
                     foreach (var item in equipos)
                     {
@@ -94,6 +102,7 @@ namespace Elevators_Tilin.View
                                 Descripcion = description,
                                 Tecnico = name,
                                 Estado = state,
+                                NumeroRegistro = numRegister,
                                 IdEquipo = item.Id,
                                 IdAutomovil = null
                             };
@@ -149,19 +158,22 @@ namespace Elevators_Tilin.View
                 //Primera validacion para saber si existe el equipo
                 List<Mantenimiento> exist = mantenimientos.Where(x => x.NumeroSerie == txtEquipNumber.Text).ToList();
                 //Segunda validacion para saber si existe el numero de registro del mantenimiento
-                // List<Mantenimiento>exist2 = mantenimientos.Where(x => x.codigoRegistro == txtRegister ).ToList();
-                if (exist.Count > 0)
+                List<Mantenimiento>exist2 = mantenimientos.Where(x => x.NumeroRegistro == Convert.ToInt32(txtRegister.Text) ).ToList();
+                if (exist.Count > 0 && exist.Count > 0)
                 {
                     foreach (var item in mantenimientos)
                     {
                         if (item.NumeroSerie == txtEquipNumber.Text)
                         {
                             item.FechaMantenimiento = dtpMaintain.Value;
+                            item.NumeroSerie = txtEquipNumber.Text;
                             item.Descripcion = txtDescription.Text;
                             item.Tecnico = txtName.Text;
                             item.Estado = cmbState.Text;
+                            item.NumeroRegistro = Convert.ToInt32(txtRegister.Text);
                             db.SaveChanges();
-                            MessageBox.Show("Mantenimiento actualizado correctamente", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro actualizado correctamente", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear();
                         }
                     }
                 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Nueva carpeta\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj": {}
+    "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Nueva carpeta\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj": {
+    "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Nueva carpeta\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
+        "projectUniqueName": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
         "projectName": "Tilin_Elevators",
-        "projectPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Nueva carpeta\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
+        "projectPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
         "packagesPath": "C:\\Users\\Gerardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Nueva carpeta\\Tilin_Elevators\\Tilin_Elevators\\obj\\",
+        "outputPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gerardo\\AppData\\Roaming\\NuGet\\NuGet.Config",

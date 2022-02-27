@@ -83,6 +83,42 @@ namespace Elevators_Tilin.View
 
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            using(var db = new SIAL_DBContext())
+            {
+                List<Automovil> vehicle = db.Automovils.ToList();
+                List<Automovil> validation = vehicle.Where(x => x.Placa == txtPlateVehicle.Text).ToList();
+                
+                if (txtBrand.Text == string.Empty || txtPlateVehicle.Text == string.Empty || txtModel.Text == string.Empty || txtYear.Text == string.Empty )
+                {
+                    MessageBox.Show("Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if(validation.Count < 0)
+                {
+                    MessageBox.Show("El numero de placa no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    foreach(var item in vehicle)
+                    {
+                        if(item.Placa == txtPlateVehicle.Text)
+                        {
+                            item.Marca = txtBrand.Text;
+                            item.Modelo = txtModel.Text;
+                            item.Anio = Convert.ToInt32(txtYear.Text);
+                            item.Combustuble = cmbGas.Text;
+                            item.ContratoInicio = dtpStartcontract.Value;
+                            item.ContratoFinal = dtpFinishcontract.Value;
+                            db.SaveChanges();
+                            MessageBox.Show("Vehiculo actualizado correctamente", "Actualizacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
         private void Clear()
         {
             txtPlateVehicle.Text = "";
@@ -91,6 +127,7 @@ namespace Elevators_Tilin.View
             txtYear.Text = "";
             cmbGas.Text = "";
         }
+
     }
 }
 
