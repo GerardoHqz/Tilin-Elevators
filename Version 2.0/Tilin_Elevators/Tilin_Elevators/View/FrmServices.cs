@@ -53,6 +53,7 @@ namespace Elevators_Tilin.View
             {
                 dgvInformation.Rows.Add(
                         element.Id,
+                        element.NumeroRegistro,
                         element.NumeroSerie,
                         element.Estado,
                         element.Tecnico,
@@ -73,6 +74,7 @@ namespace Elevators_Tilin.View
             {
                 dgvInformation.Rows.Add(
                         element.Id,
+                        element.NumeroRegistro,
                         element.NumeroSerie,
                         element.Estado,
                         element.Tecnico,

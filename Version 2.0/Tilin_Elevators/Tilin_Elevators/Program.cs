@@ -1,5 +1,4 @@
 using Elevators_Tilin.View;
-using Tilin_Elevators.View;
 
 namespace Tilin_Elevators
 {

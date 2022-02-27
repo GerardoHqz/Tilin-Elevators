@@ -1824,19 +1824,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gerardo\\.nuget\\packages\\": {}
+    "C:\\Users\\paolo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
+      "projectUniqueName": "C:\\Users\\paolo\\Desktop\\Work\\nuevo\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
       "projectName": "Tilin_Elevators",
-      "projectPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
-      "packagesPath": "C:\\Users\\Gerardo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gerardo\\Pictures\\Workspace\\Proyectos Terminados\\SIAL_APP\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\obj\\",
+      "projectPath": "C:\\Users\\paolo\\Desktop\\Work\\nuevo\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\Tilin_Elevators.csproj",
+      "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paolo\\Desktop\\Work\\nuevo\\Tilin-Elevators\\Version 2.0\\Tilin_Elevators\\Tilin_Elevators\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gerardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1895,7 +1900,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

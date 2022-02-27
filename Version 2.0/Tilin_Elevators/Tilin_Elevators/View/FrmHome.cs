@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tilin_Elevators.View;
+
 
 namespace Elevators_Tilin.View
 {

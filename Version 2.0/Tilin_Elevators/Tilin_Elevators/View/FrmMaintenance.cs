@@ -125,6 +125,7 @@ namespace Elevators_Tilin.View
                                 Descripcion = description,
                                 Tecnico = name,
                                 Estado = state,
+                                NumeroRegistro=numRegister,
                                 IdEquipo = null,
                                 IdAutomovil = item.Id
                             };

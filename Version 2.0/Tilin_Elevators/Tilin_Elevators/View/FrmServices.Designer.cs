@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.dgvInformation = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreTecnico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnExcel = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumReport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumeroIdentificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreTecnico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,17 +49,78 @@
             this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.NumReport,
             this.NumeroIdentificacion,
             this.Estado,
             this.NombreTecnico,
             this.Fecha,
             this.Descripcion});
-            this.dgvInformation.Location = new System.Drawing.Point(43, 118);
+            this.dgvInformation.Location = new System.Drawing.Point(49, 157);
+            this.dgvInformation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvInformation.Name = "dgvInformation";
             this.dgvInformation.RowHeadersWidth = 51;
             this.dgvInformation.RowTemplate.Height = 25;
-            this.dgvInformation.Size = new System.Drawing.Size(936, 400);
+            this.dgvInformation.Size = new System.Drawing.Size(1070, 533);
             this.dgvInformation.TabIndex = 7;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Azure;
+            this.btnSearch.BackgroundImage = global::Tilin_Elevators.Properties.Resources.search3;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(760, 75);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(38, 32);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtName
+            // 
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Location = new System.Drawing.Point(373, 77);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(381, 27);
+            this.txtName.TabIndex = 5;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackgroundImage = global::Tilin_Elevators.Properties.Resources.excel;
+            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcel.Location = new System.Drawing.Point(888, 67);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(66, 49);
+            this.btnExcel.TabIndex = 8;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.BtnExcel_Click);
+            // 
+            // cmbType
+            // 
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
+            "Reparaciones",
+            "Mantenimientos"});
+            this.cmbType.Location = new System.Drawing.Point(217, 75);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(134, 28);
+            this.cmbType.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(373, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "No. Placa/Serie";
             // 
             // ID
             // 
@@ -68,6 +130,13 @@
             this.ID.Name = "ID";
             this.ID.Width = 50;
             // 
+            // NumReport
+            // 
+            this.NumReport.HeaderText = "No. Reporte";
+            this.NumReport.MinimumWidth = 6;
+            this.NumReport.Name = "NumReport";
+            this.NumReport.Width = 75;
+            // 
             // NumeroIdentificacion
             // 
             this.NumeroIdentificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -75,7 +144,7 @@
             this.NumeroIdentificacion.HeaderText = "No. Identificación ";
             this.NumeroIdentificacion.MinimumWidth = 6;
             this.NumeroIdentificacion.Name = "NumeroIdentificacion";
-            this.NumeroIdentificacion.Width = 118;
+            this.NumeroIdentificacion.Width = 146;
             // 
             // Estado
             // 
@@ -109,76 +178,18 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Width = 450;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Azure;
-            this.btnSearch.BackgroundImage = global::Tilin_Elevators.Properties.Resources.search3;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(665, 56);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(33, 24);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(326, 58);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(334, 23);
-            this.txtName.TabIndex = 5;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.BackgroundImage = global::Tilin_Elevators.Properties.Resources.excel;
-            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExcel.FlatAppearance.BorderSize = 0;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcel.Location = new System.Drawing.Point(777, 50);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(58, 37);
-            this.btnExcel.TabIndex = 8;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Click += new System.EventHandler(this.BtnExcel_Click);
-            // 
-            // cmbType
-            // 
-            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Items.AddRange(new object[] {
-            "Reparaciones",
-            "Mantenimientos"});
-            this.cmbType.Location = new System.Drawing.Point(190, 56);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(118, 23);
-            this.cmbType.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 15);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "No. Placa/Serie";
-            // 
             // FrmServices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1023, 558);
+            this.ClientSize = new System.Drawing.Size(1169, 744);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.dgvInformation);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.cmbType);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmServices";
             this.Text = "FrmServices";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
@@ -195,17 +206,18 @@
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumIdentificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn tate;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroIdentificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreTecnico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.Label label1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn NumReport;
+        private DataGridViewTextBoxColumn NumeroIdentificacion;
+        private DataGridViewTextBoxColumn Estado;
+        private DataGridViewTextBoxColumn NombreTecnico;
+        private DataGridViewTextBoxColumn Fecha;
+        private DataGridViewTextBoxColumn Descripcion;
     }
 }
