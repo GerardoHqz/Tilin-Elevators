@@ -1,0 +1,37 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Microsoft.EntityFrameworkCore/6.0.2": {},
+      "Microsoft.EntityFrameworkCore.Design/6.0.2": {},
+      "Microsoft.EntityFrameworkCore.SqlServer/6.0.2": {}
+    }
+  },
+  "libraries": {
+    "Microsoft.EntityFrameworkCore/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hoZtatDA6zL/+gMXXkG3UNsF6iWguC9OkJeYUepqyPEF2mjFajga+DxS4H/UODs7HWo9oNCnhi2Q/BE9T0lg2g==",
+      "path": "microsoft.entityframeworkcore/6.0.2",
+      "hashPath": "microsoft.entityframeworkcore.6.0.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Design/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U5nqbIKJ8LQF/T1BzMjL35mwhTPsEUsjLhX+GjPQcrKaavv6oczCdznhr7VbEmCmGSjQjSarNqXkSCneUX2mXA==",
+      "path": "microsoft.entityframeworkcore.design/6.0.2",
+      "hashPath": "microsoft.entityframeworkcore.design.6.0.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ghYelO6ipPSnW06rmj4HDhvOZX1of3tNZoDuc4RUC/yT9vdg24Fq0iamJiQSFYHskePkHvhABdrTVuyxPVGN7w==",
+      "path": "microsoft.entityframeworkcore.sqlserver/6.0.2",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.2.nupkg.sha512"
+    }
+  }
+}
